@@ -10,7 +10,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-secondary-950 text-white" data-testid="footer">
+    <footer className="bg-secondary-100 dark:bg-secondary-950 text-secondary-800 dark:text-white transition-colors duration-300" data-testid="footer">
       <div className="container-custom py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <motion.div
@@ -24,9 +24,9 @@ const Footer = () => {
               <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg">R</span>
               </div>
-              <span className="text-xl font-display text-white">Rock'n'Iasi</span>
+              <span className="text-xl font-display text-secondary-800 dark:text-white">Rock'n'Iasi</span>
             </div>
-            <p className="text-gray-400 mb-4">
+            <p className="text-secondary-600 dark:text-gray-400 mb-4">
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
@@ -34,7 +34,7 @@ const Footer = () => {
                 href="https://facebook.com/rockniasi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
                 data-testid="footer-facebook"
               >
                 <span className="sr-only">Facebook</span>
@@ -44,7 +44,7 @@ const Footer = () => {
                 href="https://instagram.com/rockniasi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
                 data-testid="footer-instagram"
               >
                 <span className="sr-only">Instagram</span>
@@ -54,7 +54,7 @@ const Footer = () => {
                 href="https://twitter.com/rockniasi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
                 data-testid="footer-twitter"
               >
                 <span className="sr-only">Twitter</span>
@@ -64,7 +64,7 @@ const Footer = () => {
                 href="https://youtube.com/rockniasi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
                 data-testid="footer-youtube"
               >
                 <span className="sr-only">YouTube</span>
@@ -80,30 +80,30 @@ const Footer = () => {
             viewport={{ once: true }}
             data-testid="footer-links"
           >
-            <h4 className="text-lg font-bold text-white mb-4">{t('footer.quickLinks')}</h4>
+            <h4 className="text-lg font-bold text-secondary-800 dark:text-white mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                <a href="#about" className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">
                   {t('navigation.about')}
                 </a>
               </li>
               <li>
-                <a href="#lineup" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                <a href="#lineup" className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">
                   {t('navigation.lineup')}
                 </a>
               </li>
               <li>
-                <a href="#schedule" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                <a href="#schedule" className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">
                   {t('navigation.schedule')}
                 </a>
               </li>
               <li>
-                <a href="#tickets" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                <a href="#tickets" className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">
                   {t('navigation.tickets')}
                 </a>
               </li>
               <li>
-                <a href="#venue" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+                <a href="#venue" className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">
                   {t('navigation.venue')}
                 </a>
               </li>
@@ -117,22 +117,22 @@ const Footer = () => {
             viewport={{ once: true }}
             data-testid="footer-info"
           >
-            <h4 className="text-lg font-bold text-white mb-4">Festival Info</h4>
+            <h4 className="text-lg font-bold text-secondary-800 dark:text-white mb-4">Festival Info</h4>
             <ul className="space-y-2">
-              <li className="text-gray-400">
-                <span className="font-semibold text-white">Date:</span> {t('hero.date')}
+              <li className="text-secondary-600 dark:text-gray-400">
+                <span className="font-semibold text-secondary-800 dark:text-white">Date:</span> {t('hero.date')}
               </li>
-              <li className="text-gray-400">
-                <span className="font-semibold text-white">Location:</span> {t('hero.location')}
+              <li className="text-secondary-600 dark:text-gray-400">
+                <span className="font-semibold text-secondary-800 dark:text-white">Location:</span> {t('hero.location')}
               </li>
-              <li className="text-gray-400">
-                <span className="font-semibold text-white">Venue:</span> Iasi Exhibition Center
+              <li className="text-secondary-600 dark:text-gray-400">
+                <span className="font-semibold text-secondary-800 dark:text-white">Venue:</span> Iasi Exhibition Center
               </li>
-              <li className="text-gray-400">
-                <span className="font-semibold text-white">Capacity:</span> 50,000+
+              <li className="text-secondary-600 dark:text-gray-400">
+                <span className="font-semibold text-secondary-800 dark:text-white">Capacity:</span> 50,000+
               </li>
-              <li className="text-gray-400">
-                <span className="font-semibold text-white">Stages:</span> 5 stages
+              <li className="text-secondary-600 dark:text-gray-400">
+                <span className="font-semibold text-secondary-800 dark:text-white">Stages:</span> 5 stages
               </li>
             </ul>
           </motion.div>
@@ -144,19 +144,19 @@ const Footer = () => {
             viewport={{ once: true }}
             data-testid="footer-contact"
           >
-            <h4 className="text-lg font-bold text-white mb-4">{t('navigation.contact')}</h4>
+            <h4 className="text-lg font-bold text-secondary-800 dark:text-white mb-4">{t('navigation.contact')}</h4>
             <ul className="space-y-2">
-              <li className="text-gray-400">
-                <span className="font-semibold text-white">Email:</span> {t('contact.info.email')}
+              <li className="text-secondary-600 dark:text-gray-400">
+                <span className="font-semibold text-secondary-800 dark:text-white">Email:</span> {t('contact.info.email')}
               </li>
-              <li className="text-gray-400">
-                <span className="font-semibold text-white">Phone:</span> {t('contact.info.phone')}
+              <li className="text-secondary-600 dark:text-gray-400">
+                <span className="font-semibold text-secondary-800 dark:text-white">Phone:</span> {t('contact.info.phone')}
               </li>
-              <li className="text-gray-400">
-                <span className="font-semibold text-white">Address:</span> {t('contact.info.address')}
+              <li className="text-secondary-600 dark:text-gray-400">
+                <span className="font-semibold text-secondary-800 dark:text-white">Address:</span> {t('contact.info.address')}
               </li>
-              <li className="text-gray-400">
-                <span className="font-semibold text-white">Hours:</span> Mon-Fri 9:00-18:00
+              <li className="text-secondary-600 dark:text-gray-400">
+                <span className="font-semibold text-secondary-800 dark:text-white">Hours:</span> Mon-Fri 9:00-18:00
               </li>
             </ul>
           </motion.div>
@@ -167,24 +167,24 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="border-t border-secondary-700 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-secondary-300 dark:border-secondary-700 pt-8 flex flex-col md:flex-row justify-between items-center"
           data-testid="footer-bottom"
         >
-          <div className="text-gray-400 text-sm mb-4 md:mb-0">
+          <div className="text-secondary-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
             <p>
               {t('footer.rights')} Made with{' '}
-              <Heart size={16} className="inline text-primary-400" /> in Iasi, Romania.
+              <Heart size={16} className="inline text-primary-500 dark:text-primary-400" /> in Iasi, Romania.
             </p>
           </div>
           
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+            <a href="#" className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+            <a href="#" className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">
               Terms of Service
             </a>
-            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+            <a href="#" className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300">
               Cookie Policy
             </a>
           </div>

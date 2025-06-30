@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Menu, X } from 'lucide-react'
 import LanguageSwitcher from './LanguageSwitcher'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   const { t } = useTranslation()
@@ -38,7 +39,7 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-secondary-900/95 backdrop-blur-md shadow-lg' 
+          ? 'bg-white/95 dark:bg-secondary-900/95 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
       }`}
       data-testid="navbar"
@@ -50,7 +51,7 @@ const Navbar = () => {
             <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">R</span>
             </div>
-            <span className="text-xl font-display text-white">
+            <span className="text-xl font-display text-secondary-800 dark:text-white">
               Rock'n'Iasi
             </span>
           </div>
@@ -61,21 +62,23 @@ const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-primary-400 transition-colors duration-300 font-medium"
+                className="text-secondary-700 dark:text-white hover:text-primary-400 transition-colors duration-300 font-medium"
                 data-testid={`nav-${item.id}`}
               >
                 {item.name}
               </button>
             ))}
+            <ThemeToggle />
             <LanguageSwitcher />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-3">
+            <ThemeToggle />
             <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white p-2"
+              className="text-secondary-700 dark:text-white p-2"
               data-testid="mobile-menu-button"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -85,13 +88,13 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-secondary-800 rounded-lg mt-2 p-4" data-testid="mobile-menu">
+          <div className="md:hidden bg-white dark:bg-secondary-800 rounded-lg mt-2 p-4 shadow-lg" data-testid="mobile-menu">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-primary-400 transition-colors duration-300 text-left"
+                  className="text-secondary-700 dark:text-white hover:text-primary-400 transition-colors duration-300 text-left"
                   data-testid={`mobile-nav-${item.id}`}
                 >
                   {item.name}

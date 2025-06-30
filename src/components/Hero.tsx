@@ -19,12 +19,12 @@ const Hero = () => {
       data-testid="hero-section"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-secondary-900 to-accent-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-100 via-secondary-100 to-accent-100 dark:from-primary-900 dark:via-secondary-900 dark:to-accent-900"></div>
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-primary-500/30 dark:bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-500/30 dark:bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
       </div>
 
       <div className="container-custom text-center relative z-10">
@@ -49,7 +49,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display text-white mb-6"
+            className="text-5xl md:text-7xl lg:text-8xl font-display text-secondary-800 dark:text-white mb-6"
             data-testid="hero-title"
           >
             {t('hero.title')}<span className="text-primary-400">{t('hero.titleAccent')}</span>
@@ -60,7 +60,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-secondary-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             data-testid="hero-subtitle"
           >
             {t('hero.subtitle')}
@@ -74,12 +74,12 @@ const Hero = () => {
             className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12"
             data-testid="event-details"
           >
-            <div className="flex items-center space-x-2 text-gray-300">
-              <Calendar size={20} className="text-primary-400" />
+            <div className="flex items-center space-x-2 text-secondary-600 dark:text-gray-300">
+              <Calendar size={20} className="text-primary-500 dark:text-primary-400" />
               <span>{t('hero.date')}</span>
             </div>
-            <div className="flex items-center space-x-2 text-gray-300">
-              <MapPin size={20} className="text-primary-400" />
+            <div className="flex items-center space-x-2 text-secondary-600 dark:text-gray-300">
+              <MapPin size={20} className="text-primary-500 dark:text-primary-400" />
               <span>{t('hero.location')}</span>
             </div>
           </motion.div>
@@ -117,11 +117,11 @@ const Hero = () => {
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
             data-testid="scroll-indicator"
           >
-            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+            <div className="w-6 h-10 border-2 border-secondary-700 dark:border-white rounded-full flex justify-center">
               <motion.div
                 animate={{ y: [0, 12, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-1 h-3 bg-white rounded-full mt-2"
+                className="w-1 h-3 bg-secondary-700 dark:bg-white rounded-full mt-2"
               ></motion.div>
             </div>
           </motion.div>

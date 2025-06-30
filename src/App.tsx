@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from './contexts/ThemeContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -11,25 +12,27 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-secondary-900">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <About />
-              <Lineup />
-              <Schedule />
-              <Tickets />
-              <Venue />
-              <Contact />
-            </>
-          } />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <div className="min-h-screen bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero />
+                <About />
+                <Lineup />
+                <Schedule />
+                <Tickets />
+                <Venue />
+                <Contact />
+              </>
+            } />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   )
 }
 
