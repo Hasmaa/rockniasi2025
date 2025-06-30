@@ -112,16 +112,23 @@ const Venue = () => {
             data-testid="venue-map"
           >
             <div className="bg-gradient-to-br from-primary-600 to-accent-600 p-1 rounded-lg">
-              <div className="bg-white dark:bg-secondary-900 rounded-lg p-8 h-80 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin size={40} className="text-white" />
+              <div className="relative h-80 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600&h=400&fit=crop&crop=entropy&auto=format&q=80"
+                  alt="Modern exhibition center venue"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-primary-600/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <MapPin size={32} className="text-white" />
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-2">Iasi Exhibition Center</h4>
+                    <p className="text-gray-200 mb-4">Strada Palat, Nr. 1</p>
+                    <button className="btn-secondary text-sm">
+                      {t('common.getDirections')}
+                    </button>
                   </div>
-                  <h4 className="text-xl font-bold text-secondary-800 dark:text-white mb-2">Iasi Exhibition Center</h4>
-                  <p className="text-secondary-600 dark:text-gray-400 mb-4">Strada Palat, Nr. 1</p>
-                  <button className="btn-secondary text-sm">
-                    {t('common.getDirections')}
-                  </button>
                 </div>
               </div>
             </div>

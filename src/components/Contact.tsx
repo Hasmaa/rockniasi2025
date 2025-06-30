@@ -6,8 +6,13 @@ const Contact = () => {
   const { t } = useTranslation()
   
   return (
-    <section id="contact" className="section-padding bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300" data-testid="contact-section">
-      <div className="container-custom">
+    <section id="contact" className="section-padding bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300 relative overflow-hidden" data-testid="contact-section">
+      {/* Background elements */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+        <div className="absolute top-20 -left-20 w-96 h-96 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 -right-20 w-80 h-80 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full blur-3xl"></div>
+      </div>
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

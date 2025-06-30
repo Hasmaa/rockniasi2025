@@ -87,13 +87,17 @@ const About = () => {
             data-testid="about-image"
           >
             <div className="bg-gradient-to-br from-primary-600 to-accent-600 p-1 rounded-lg">
-              <div className="bg-white dark:bg-secondary-900 rounded-lg p-8 h-80 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Music size={40} className="text-white" />
+              <div className="relative h-80 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&h=400&fit=crop&crop=entropy&auto=format&q=80"
+                  alt="Rock festival crowd at night"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <div className="text-center">
+                    <h4 className="text-2xl font-bold text-white mb-2">Rock'n'Iasi 2025</h4>
+                    <p className="text-gray-200">Experience the power of rock</p>
                   </div>
-                  <h4 className="text-xl font-bold text-secondary-800 dark:text-white mb-2">Rock'n'Iasi 2025</h4>
-                  <p className="text-secondary-600 dark:text-gray-400">Experience the power of rock</p>
                 </div>
               </div>
             </div>

@@ -51,8 +51,13 @@ const Lineup = () => {
   ]
 
   return (
-    <section id="lineup" className="section-padding bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300" data-testid="lineup-section">
-      <div className="container-custom">
+        <section id="lineup" className="section-padding bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300 relative" data-testid="lineup-section">
+      {/* Clean background elements */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-br from-accent-500 to-primary-500 rounded-full blur-3xl"></div>
+      </div>
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

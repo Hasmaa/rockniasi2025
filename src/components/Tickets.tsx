@@ -54,8 +54,23 @@ const Tickets = () => {
   ]
 
   return (
-    <section id="tickets" className="section-padding bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300" data-testid="tickets-section">
-      <div className="container-custom">
+    <section id="tickets" className="section-padding bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300 relative" data-testid="tickets-section">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-3 dark:opacity-5">
+        <div className="absolute top-16 left-4 transform rotate-12">
+          <div className="w-16 h-20 border-2 border-dashed border-primary-500/30"></div>
+        </div>
+        <div className="absolute top-32 right-8 transform -rotate-12">
+          <div className="w-20 h-24 border-2 border-dashed border-accent-500/30"></div>
+        </div>
+        <div className="absolute bottom-20 left-12 transform rotate-45">
+          <div className="w-12 h-16 border-2 border-dashed border-primary-500/30"></div>
+        </div>
+        <div className="absolute bottom-40 right-16 transform -rotate-45">
+          <div className="w-18 h-22 border-2 border-dashed border-accent-500/30"></div>
+        </div>
+      </div>
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

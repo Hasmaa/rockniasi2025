@@ -42,8 +42,15 @@ const Schedule = () => {
   ]
 
   return (
-    <section id="schedule" className="section-padding bg-secondary-100 dark:bg-secondary-800 transition-colors duration-300" data-testid="schedule-section">
-      <div className="container-custom">
+    <section id="schedule" className="section-padding bg-secondary-100 dark:bg-secondary-800 transition-colors duration-300 relative" data-testid="schedule-section">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-3 dark:opacity-5">
+        <div className="absolute top-10 left-10 w-32 h-32 border-2 border-primary-500/20 rounded-full"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 border-2 border-accent-500/20 rounded-full"></div>
+        <div className="absolute bottom-20 left-32 w-20 h-20 border-2 border-primary-500/20 rounded-full"></div>
+        <div className="absolute bottom-40 right-10 w-36 h-36 border-2 border-accent-500/20 rounded-full"></div>
+      </div>
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
