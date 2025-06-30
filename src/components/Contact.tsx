@@ -6,7 +6,7 @@ const Contact = () => {
   const { t } = useTranslation()
   
   return (
-    <section id="contact" className="section-padding bg-secondary-900" data-testid="contact-section">
+    <section id="contact" className="section-padding bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300" data-testid="contact-section">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -15,10 +15,10 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="contact-title">
+          <h2 className="text-4xl md:text-5xl font-display text-secondary-800 dark:text-white mb-6" data-testid="contact-title">
             {t('contact.title')}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="contact-description">
+          <p className="text-xl text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto" data-testid="contact-description">
             {t('contact.subtitle')}
           </p>
         </motion.div>
@@ -31,50 +31,50 @@ const Contact = () => {
             viewport={{ once: true }}
             data-testid="contact-form"
           >
-            <h3 className="text-2xl font-display text-white mb-6">Send us a Message</h3>
+            <h3 className="text-2xl font-display text-secondary-800 dark:text-white mb-6">Send us a Message</h3>
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-gray-300 mb-2">{t('contact.form.name')}</label>
+                  <label htmlFor="firstName" className="block text-secondary-600 dark:text-gray-300 mb-2">{t('contact.form.name')}</label>
                   <input
                     type="text"
                     id="firstName"
                     name="firstName"
                     placeholder={t('contact.form.namePlaceholder')}
-                    className="w-full px-4 py-3 bg-secondary-800 border border-secondary-600 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
+                    className="w-full px-4 py-3 bg-white dark:bg-secondary-800 border border-secondary-300 dark:border-secondary-600 rounded-lg text-secondary-800 dark:text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
                     data-testid="contact-first-name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-gray-300 mb-2">Last Name</label>
+                  <label htmlFor="lastName" className="block text-secondary-600 dark:text-gray-300 mb-2">Last Name</label>
                   <input
                     type="text"
                     id="lastName"
                     name="lastName"
-                    className="w-full px-4 py-3 bg-secondary-800 border border-secondary-600 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
+                    className="w-full px-4 py-3 bg-white dark:bg-secondary-800 border border-secondary-300 dark:border-secondary-600 rounded-lg text-secondary-800 dark:text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
                     data-testid="contact-last-name"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-gray-300 mb-2">{t('contact.form.email')}</label>
+                <label htmlFor="email" className="block text-secondary-600 dark:text-gray-300 mb-2">{t('contact.form.email')}</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder={t('contact.form.emailPlaceholder')}
-                  className="w-full px-4 py-3 bg-secondary-800 border border-secondary-600 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
+                  className="w-full px-4 py-3 bg-white dark:bg-secondary-800 border border-secondary-300 dark:border-secondary-600 rounded-lg text-secondary-800 dark:text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
                   data-testid="contact-email"
                 />
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-gray-300 mb-2">{t('contact.form.subject')}</label>
+                <label htmlFor="subject" className="block text-secondary-600 dark:text-gray-300 mb-2">{t('contact.form.subject')}</label>
                 <select
                   id="subject"
                   name="subject"
-                  className="w-full px-4 py-3 bg-secondary-800 border border-secondary-600 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
+                  className="w-full px-4 py-3 bg-white dark:bg-secondary-800 border border-secondary-300 dark:border-secondary-600 rounded-lg text-secondary-800 dark:text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
                   data-testid="contact-subject"
                 >
                   <option value="">{t('contact.form.subjectPlaceholder')}</option>
@@ -89,12 +89,12 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-gray-300 mb-2">{t('contact.form.message')}</label>
+                <label htmlFor="message" className="block text-secondary-600 dark:text-gray-300 mb-2">{t('contact.form.message')}</label>
                 <textarea
                   id="message"
                   name="message"
                   rows={6}
-                  className="w-full px-4 py-3 bg-secondary-800 border border-secondary-600 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-white dark:bg-secondary-800 border border-secondary-300 dark:border-secondary-600 rounded-lg text-secondary-800 dark:text-white focus:outline-none focus:border-primary-500 transition-colors duration-300 resize-none"
                   placeholder={t('contact.form.messagePlaceholder')}
                   data-testid="contact-message"
                 ></textarea>
@@ -118,7 +118,7 @@ const Contact = () => {
             viewport={{ once: true }}
             data-testid="contact-info"
           >
-            <h3 className="text-2xl font-display text-white mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-display text-secondary-800 dark:text-white mb-6">Contact Information</h3>
             
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -126,9 +126,9 @@ const Contact = () => {
                   <Mail size={24} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-1">Email</h4>
-                  <p className="text-gray-300">{t('contact.info.email')}</p>
-                  <p className="text-gray-400 text-sm">We'll respond within 24 hours</p>
+                  <h4 className="text-secondary-800 dark:text-white font-bold mb-1">Email</h4>
+                  <p className="text-secondary-600 dark:text-gray-300">{t('contact.info.email')}</p>
+                  <p className="text-secondary-500 dark:text-gray-400 text-sm">We'll respond within 24 hours</p>
                 </div>
               </div>
 
@@ -137,9 +137,9 @@ const Contact = () => {
                   <Phone size={24} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-1">Phone</h4>
-                  <p className="text-gray-300">{t('contact.info.phone')}</p>
-                  <p className="text-gray-400 text-sm">Mon-Fri 9:00-18:00 (EET)</p>
+                  <h4 className="text-secondary-800 dark:text-white font-bold mb-1">Phone</h4>
+                  <p className="text-secondary-600 dark:text-gray-300">{t('contact.info.phone')}</p>
+                  <p className="text-secondary-500 dark:text-gray-400 text-sm">Mon-Fri 9:00-18:00 (EET)</p>
                 </div>
               </div>
 
@@ -148,8 +148,8 @@ const Contact = () => {
                   <MapPin size={24} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-1">Address</h4>
-                  <p className="text-gray-300">{t('contact.info.address')}</p>
+                  <h4 className="text-secondary-800 dark:text-white font-bold mb-1">Address</h4>
+                  <p className="text-secondary-600 dark:text-gray-300">{t('contact.info.address')}</p>
                 </div>
               </div>
 
@@ -158,16 +158,16 @@ const Contact = () => {
                   <Clock size={24} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-1">Office Hours</h4>
-                  <p className="text-gray-300">Monday - Friday: 9:00 - 18:00</p>
-                  <p className="text-gray-300">Saturday: 10:00 - 16:00</p>
-                  <p className="text-gray-400 text-sm">Closed on Sundays</p>
+                  <h4 className="text-secondary-800 dark:text-white font-bold mb-1">Office Hours</h4>
+                  <p className="text-secondary-600 dark:text-gray-300">Monday - Friday: 9:00 - 18:00</p>
+                  <p className="text-secondary-600 dark:text-gray-300">Saturday: 10:00 - 16:00</p>
+                  <p className="text-secondary-500 dark:text-gray-400 text-sm">Closed on Sundays</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 bg-secondary-800 rounded-lg p-6">
-              <h4 className="text-xl font-display text-white mb-4">{t('common.followUs')}</h4>
+            <div className="mt-12 bg-white dark:bg-secondary-800 rounded-lg p-6 shadow-lg">
+              <h4 className="text-xl font-display text-secondary-800 dark:text-white mb-4">{t('common.followUs')}</h4>
               <div className="flex space-x-4">
                 <a 
                   href="https://facebook.com/rockniasi"

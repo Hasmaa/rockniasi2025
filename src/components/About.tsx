@@ -29,7 +29,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="section-padding bg-secondary-800" data-testid="about-section">
+    <section id="about" className="section-padding bg-secondary-100 dark:bg-secondary-800 transition-colors duration-300" data-testid="about-section">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -38,10 +38,10 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="about-title">
+          <h2 className="text-4xl md:text-5xl font-display text-secondary-800 dark:text-white mb-6" data-testid="about-title">
             {t('about.title')}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="about-description">
+          <p className="text-xl text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto" data-testid="about-description">
             {t('about.subtitle')}
           </p>
         </motion.div>
@@ -54,13 +54,13 @@ const About = () => {
             viewport={{ once: true }}
             data-testid="about-content"
           >
-            <h3 className="text-3xl font-display text-white mb-6">
+            <h3 className="text-3xl font-display text-secondary-800 dark:text-white mb-6">
               The Ultimate Rock Experience
             </h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-secondary-600 dark:text-gray-300 mb-6">
               {t('about.description')}
             </p>
-            <p className="text-gray-300 mb-6">
+            <p className="text-secondary-600 dark:text-gray-300 mb-6">
               Set against the beautiful backdrop of Iasi, Romania's cultural capital, the festival 
               offers not just incredible music, but also amazing food, art installations, and 
               interactive experiences that make every moment memorable.
@@ -87,13 +87,13 @@ const About = () => {
             data-testid="about-image"
           >
             <div className="bg-gradient-to-br from-primary-600 to-accent-600 p-1 rounded-lg">
-              <div className="bg-secondary-900 rounded-lg p-8 h-80 flex items-center justify-center">
+              <div className="bg-white dark:bg-secondary-900 rounded-lg p-8 h-80 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-24 h-24 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Music size={40} className="text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-2">Rock'n'Iasi 2025</h4>
-                  <p className="text-gray-400">Experience the power of rock</p>
+                  <h4 className="text-xl font-bold text-secondary-800 dark:text-white mb-2">Rock'n'Iasi 2025</h4>
+                  <p className="text-secondary-600 dark:text-gray-400">Experience the power of rock</p>
                 </div>
               </div>
             </div>
@@ -115,14 +115,14 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-secondary-700 rounded-lg hover:bg-secondary-600 transition-colors duration-300"
+                className="text-center p-6 bg-white dark:bg-secondary-700 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-600 transition-colors duration-300 shadow-md"
                 data-testid={`feature-${index}`}
               >
                 <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon size={32} className="text-white" />
                 </div>
-                <h4 className="text-xl font-bold text-white mb-2">{feature.title}</h4>
-                <p className="text-gray-300">{feature.description}</p>
+                <h4 className="text-xl font-bold text-secondary-800 dark:text-white mb-2">{feature.title}</h4>
+                <p className="text-secondary-600 dark:text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>

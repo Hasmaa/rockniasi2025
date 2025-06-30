@@ -51,7 +51,7 @@ const Lineup = () => {
   ]
 
   return (
-    <section id="lineup" className="section-padding bg-secondary-900" data-testid="lineup-section">
+    <section id="lineup" className="section-padding bg-secondary-50 dark:bg-secondary-900 transition-colors duration-300" data-testid="lineup-section">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -60,10 +60,10 @@ const Lineup = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="lineup-title">
+          <h2 className="text-4xl md:text-5xl font-display text-secondary-800 dark:text-white mb-6" data-testid="lineup-title">
             {t('lineup.title')}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="lineup-description">
+          <p className="text-xl text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto" data-testid="lineup-description">
             {t('lineup.subtitle')}
           </p>
         </motion.div>
@@ -76,7 +76,7 @@ const Lineup = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-secondary-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
+              className="bg-white dark:bg-secondary-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 shadow-lg"
               data-testid={`artist-${index}`}
             >
               <div className="relative h-64 bg-gradient-to-br from-primary-600 to-accent-600">
@@ -101,7 +101,7 @@ const Lineup = () => {
                     href={`https://instagram.com/${artist.social.instagram}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                    className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
                     data-testid={`artist-${index}-instagram`}
                   >
                     <Instagram size={20} />
@@ -110,7 +110,7 @@ const Lineup = () => {
                     href={`https://twitter.com/${artist.social.twitter}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                    className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
                     data-testid={`artist-${index}-twitter`}
                   >
                     <Twitter size={20} />
@@ -119,7 +119,7 @@ const Lineup = () => {
                     href={`https://${artist.social.website}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                    className="text-secondary-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
                     data-testid={`artist-${index}-website`}
                   >
                     <Globe size={20} />
@@ -127,7 +127,7 @@ const Lineup = () => {
                 </div>
                 
                 <div className="text-center">
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-secondary-600 dark:text-gray-300 text-sm">
                     Don't miss the incredible performance by {artist.name} at Rock'n'Iasi 2025!
                   </p>
                 </div>
@@ -144,7 +144,7 @@ const Lineup = () => {
           className="text-center mt-16"
           data-testid="lineup-cta"
         >
-          <p className="text-gray-300 mb-6">
+          <p className="text-secondary-600 dark:text-gray-300 mb-6">
             More artists to be announced! Stay tuned for updates.
           </p>
           <button className="btn-primary">
