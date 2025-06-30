@@ -1,0 +1,132 @@
+import { motion } from 'framer-motion'
+import { Play, Calendar, MapPin } from 'lucide-react'
+
+const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  return (
+    <section 
+      id="hero" 
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      data-testid="hero-section"
+    >
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-secondary-900 to-accent-900"></div>
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
+      </div>
+
+      <div className="container-custom text-center relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Festival badge */}
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            className="inline-block bg-primary-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6"
+            data-testid="festival-badge"
+          >
+            JULY 15-17, 2025
+          </motion.div>
+
+          {/* Main title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-display text-white mb-6"
+            data-testid="hero-title"
+          >
+            ROCK'N'<span className="text-primary-400">IASI</span>
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+            data-testid="hero-subtitle"
+          >
+            The biggest rock festival in Eastern Europe. Three days of pure rock energy, 
+            amazing performances, and unforgettable memories.
+          </motion.p>
+
+          {/* Event details */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12"
+            data-testid="event-details"
+          >
+            <div className="flex items-center space-x-2 text-gray-300">
+              <Calendar size={20} className="text-primary-400" />
+              <span>July 15-17, 2025</span>
+            </div>
+            <div className="flex items-center space-x-2 text-gray-300">
+              <MapPin size={20} className="text-primary-400" />
+              <span>Iasi, Romania</span>
+            </div>
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            data-testid="hero-buttons"
+          >
+            <button
+              onClick={() => scrollToSection('tickets')}
+              className="btn-primary flex items-center space-x-2 group"
+              data-testid="buy-tickets-btn"
+            >
+              <Play size={20} className="group-hover:scale-110 transition-transform" />
+              <span>Buy Tickets</span>
+            </button>
+            <button
+              onClick={() => scrollToSection('lineup')}
+              className="btn-secondary"
+              data-testid="view-lineup-btn"
+            >
+              View Lineup
+            </button>
+          </motion.div>
+
+          {/* Scroll indicator */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 1 }}
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            data-testid="scroll-indicator"
+          >
+            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+              <motion.div
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="w-1 h-3 bg-white rounded-full mt-2"
+              ></motion.div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+export default Hero 

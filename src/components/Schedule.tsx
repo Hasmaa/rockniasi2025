@@ -1,0 +1,150 @@
+import { motion } from 'framer-motion'
+import { Clock, MapPin } from 'lucide-react'
+
+const Schedule = () => {
+  const schedule = [
+    {
+      day: "Day 1 - July 15",
+      date: "Tuesday",
+      events: [
+        { time: "14:00", artist: "Opening Ceremony", stage: "Main Stage" },
+        { time: "15:30", artist: "Local Rock Band", stage: "Rock Stage" },
+        { time: "17:00", artist: "Arctic Monkeys", stage: "Main Stage" },
+        { time: "19:30", artist: "Alternative Rock Act", stage: "Alternative Stage" },
+        { time: "22:00", artist: "Metallica", stage: "Main Stage" }
+      ]
+    },
+    {
+      day: "Day 2 - July 16",
+      date: "Wednesday",
+      events: [
+        { time: "14:00", artist: "Morning Rock Session", stage: "Rock Stage" },
+        { time: "15:30", artist: "Indie Rock Band", stage: "Alternative Stage" },
+        { time: "17:00", artist: "The Killers", stage: "Main Stage" },
+        { time: "19:30", artist: "Heavy Metal Act", stage: "Rock Stage" },
+        { time: "22:00", artist: "Foo Fighters", stage: "Main Stage" }
+      ]
+    },
+    {
+      day: "Day 3 - July 17",
+      date: "Thursday",
+      events: [
+        { time: "14:00", artist: "Final Day Kickoff", stage: "All Stages" },
+        { time: "15:30", artist: "Stoner Rock Band", stage: "Rock Stage" },
+        { time: "17:00", artist: "Queens of the Stone Age", stage: "Main Stage" },
+        { time: "19:30", artist: "Funk Rock Act", stage: "Alternative Stage" },
+        { time: "22:00", artist: "Red Hot Chili Peppers", stage: "Main Stage" }
+      ]
+    }
+  ]
+
+  return (
+    <section id="schedule" className="section-padding bg-secondary-800" data-testid="schedule-section">
+      <div className="container-custom">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="schedule-title">
+            Festival Schedule
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="schedule-description">
+            Plan your perfect festival experience with our detailed schedule. 
+            Three days of non-stop rock music across multiple stages.
+          </p>
+        </motion.div>
+
+        <div className="space-y-12" data-testid="schedule-timeline">
+          {schedule.map((day, dayIndex) => (
+            <motion.div
+              key={day.day}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: dayIndex * 0.2 }}
+              viewport={{ once: true }}
+              className="bg-secondary-700 rounded-lg p-8"
+              data-testid={`day-${dayIndex}`}
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-display text-primary-400 mb-2" data-testid={`day-${dayIndex}-title`}>
+                  {day.day}
+                </h3>
+                <p className="text-gray-300 text-lg">{day.date}</p>
+              </div>
+
+              <div className="space-y-4" data-testid={`day-${dayIndex}-events`}>
+                {day.events.map((event, eventIndex) => (
+                  <motion.div
+                    key={`${day.day}-${event.time}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: eventIndex * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-center justify-between p-4 bg-secondary-600 rounded-lg hover:bg-secondary-500 transition-colors duration-300"
+                    data-testid={`event-${dayIndex}-${eventIndex}`}
+                  >
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center space-x-2 text-primary-400">
+                        <Clock size={20} />
+                        <span className="font-bold">{event.time}</span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold text-lg">{event.artist}</h4>
+                        <div className="flex items-center space-x-2 text-gray-300">
+                          <MapPin size={16} />
+                          <span>{event.stage}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="text-right">
+                      <div className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        {event.time}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+          data-testid="schedule-info"
+        >
+          <div className="bg-secondary-700 rounded-lg p-8 max-w-2xl mx-auto">
+            <h4 className="text-2xl font-display text-white mb-4">Important Information</h4>
+            <div className="grid md:grid-cols-2 gap-6 text-left">
+              <div>
+                <h5 className="text-primary-400 font-bold mb-2">Gates Open</h5>
+                <p className="text-gray-300">13:00 each day</p>
+              </div>
+              <div>
+                <h5 className="text-primary-400 font-bold mb-2">Last Entry</h5>
+                <p className="text-gray-300">21:00 each day</p>
+              </div>
+              <div>
+                <h5 className="text-primary-400 font-bold mb-2">Food & Drinks</h5>
+                <p className="text-gray-300">Available throughout the festival</p>
+              </div>
+              <div>
+                <h5 className="text-primary-400 font-bold mb-2">Security</h5>
+                <p className="text-gray-300">24/7 security on site</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+export default Schedule 
