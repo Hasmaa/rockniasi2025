@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
 
 const Contact = () => {
+  const { t } = useTranslation()
+  
   return (
     <section id="contact" className="section-padding bg-secondary-900" data-testid="contact-section">
       <div className="container-custom">
@@ -13,11 +16,10 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="contact-title">
-            Get in Touch
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="contact-description">
-            Have questions about the festival? Want to volunteer or become a vendor? 
-            We'd love to hear from you!
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -33,11 +35,12 @@ const Contact = () => {
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-gray-300 mb-2">First Name</label>
+                  <label htmlFor="firstName" className="block text-gray-300 mb-2">{t('contact.form.name')}</label>
                   <input
                     type="text"
                     id="firstName"
                     name="firstName"
+                    placeholder={t('contact.form.namePlaceholder')}
                     className="w-full px-4 py-3 bg-secondary-800 border border-secondary-600 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
                     data-testid="contact-first-name"
                   />
@@ -55,25 +58,26 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-gray-300 mb-2">Email Address</label>
+                <label htmlFor="email" className="block text-gray-300 mb-2">{t('contact.form.email')}</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  placeholder={t('contact.form.emailPlaceholder')}
                   className="w-full px-4 py-3 bg-secondary-800 border border-secondary-600 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
                   data-testid="contact-email"
                 />
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-gray-300 mb-2">Subject</label>
+                <label htmlFor="subject" className="block text-gray-300 mb-2">{t('contact.form.subject')}</label>
                 <select
                   id="subject"
                   name="subject"
                   className="w-full px-4 py-3 bg-secondary-800 border border-secondary-600 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors duration-300"
                   data-testid="contact-subject"
                 >
-                  <option value="">Select a subject</option>
+                  <option value="">{t('contact.form.subjectPlaceholder')}</option>
                   <option value="tickets">Ticket Information</option>
                   <option value="lineup">Lineup Questions</option>
                   <option value="venue">Venue & Directions</option>
@@ -85,13 +89,13 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
+                <label htmlFor="message" className="block text-gray-300 mb-2">{t('contact.form.message')}</label>
                 <textarea
                   id="message"
                   name="message"
                   rows={6}
                   className="w-full px-4 py-3 bg-secondary-800 border border-secondary-600 rounded-lg text-white focus:outline-none focus:border-primary-500 transition-colors duration-300 resize-none"
-                  placeholder="Tell us how we can help you..."
+                  placeholder={t('contact.form.messagePlaceholder')}
                   data-testid="contact-message"
                 ></textarea>
               </div>
@@ -102,7 +106,7 @@ const Contact = () => {
                 data-testid="contact-submit"
               >
                 <Send size={20} />
-                <span>Send Message</span>
+                <span>{t('contact.form.send')}</span>
               </button>
             </form>
           </motion.div>
@@ -123,7 +127,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Email</h4>
-                  <p className="text-gray-300">info@rockniasi.com</p>
+                  <p className="text-gray-300">{t('contact.info.email')}</p>
                   <p className="text-gray-400 text-sm">We'll respond within 24 hours</p>
                 </div>
               </div>
@@ -134,7 +138,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Phone</h4>
-                  <p className="text-gray-300">+40 232 123 456</p>
+                  <p className="text-gray-300">{t('contact.info.phone')}</p>
                   <p className="text-gray-400 text-sm">Mon-Fri 9:00-18:00 (EET)</p>
                 </div>
               </div>
@@ -145,8 +149,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Address</h4>
-                  <p className="text-gray-300">Strada Palat, Nr. 1</p>
-                  <p className="text-gray-300">Iasi, Romania</p>
+                  <p className="text-gray-300">{t('contact.info.address')}</p>
                 </div>
               </div>
 
@@ -164,7 +167,7 @@ const Contact = () => {
             </div>
 
             <div className="mt-12 bg-secondary-800 rounded-lg p-6">
-              <h4 className="text-xl font-display text-white mb-4">Follow Us</h4>
+              <h4 className="text-xl font-display text-white mb-4">{t('common.followUs')}</h4>
               <div className="flex space-x-4">
                 <a 
                   href="https://facebook.com/rockniasi"

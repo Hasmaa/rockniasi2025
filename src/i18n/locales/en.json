@@ -1,0 +1,127 @@
+{
+  "common": {
+    "buyTickets": "Buy Tickets",
+    "viewLineup": "View Lineup",
+    "learnMore": "Learn More",
+    "getDirections": "Get Directions",
+    "contact": "Contact",
+    "followUs": "Follow Us"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "lineup": "Lineup",
+    "schedule": "Schedule",
+    "tickets": "Tickets",
+    "venue": "Venue",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "JULY 15-17, 2025",
+    "title": "ROCK'N'",
+    "titleAccent": "IASI",
+    "subtitle": "The biggest rock festival in Eastern Europe. Three days of pure rock energy, amazing performances, and unforgettable memories.",
+    "date": "July 15-17, 2025",
+    "location": "Iasi, Romania"
+  },
+  "about": {
+    "title": "About the Festival",
+    "subtitle": "Rock'n'Iasi is more than just a music festival",
+    "description": "Since its inception, Rock'n'Iasi has been the premier destination for rock music enthusiasts in Eastern Europe. Our festival brings together legendary artists and emerging talents on multiple stages, creating an unforgettable experience for thousands of rock fans.",
+    "stats": {
+      "years": "Years Running",
+      "artists": "Artists Performing",
+      "stages": "Different Stages",
+      "capacity": "Festival Capacity"
+    }
+  },
+  "lineup": {
+    "title": "Artist Lineup",
+    "subtitle": "Meet the incredible artists that will rock the stage",
+    "headliners": "Headliners",
+    "supporting": "Supporting Acts",
+    "local": "Local Talents"
+  },
+  "schedule": {
+    "title": "Festival Schedule",
+    "subtitle": "Three days of non-stop rock music",
+    "days": {
+      "friday": "Friday",
+      "saturday": "Saturday", 
+      "sunday": "Sunday"
+    }
+  },
+  "tickets": {
+    "title": "Get Your Tickets",
+    "subtitle": "Choose your festival experience",
+    "types": {
+      "dayPass": {
+        "name": "Day Pass",
+        "description": "Access to one day of the festival"
+      },
+      "weekendPass": {
+        "name": "Weekend Pass", 
+        "description": "Full festival access for all three days"
+      },
+      "vipPass": {
+        "name": "VIP Pass",
+        "description": "Premium experience with backstage access"
+      }
+    },
+    "features": {
+      "access": "Festival Access",
+      "parking": "Free Parking",
+      "food": "Food & Drinks",
+      "merchandise": "Official Merchandise",
+      "backstage": "Backstage Access",
+      "meetGreet": "Meet & Greet"
+    },
+    "soldOut": "Sold Out",
+    "buyNow": "Buy Now"
+  },
+  "venue": {
+    "title": "Festival Venue",
+    "subtitle": "Located in the heart of Iasi",
+    "description": "The festival takes place at the spectacular Iasi Central Park, offering multiple stages, food courts, camping areas, and easy access to the city center.",
+    "features": {
+      "stages": "Multiple Stages",
+      "camping": "Camping Available", 
+      "parking": "Free Parking",
+      "food": "Food Courts",
+      "transport": "Public Transport",
+      "accessibility": "Accessible Venue"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions? We're here to help!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "your.email@example.com",
+      "subjectPlaceholder": "What's this about?",
+      "messagePlaceholder": "Tell us more..."
+    },
+    "info": {
+      "address": "123 Festival Street, Iasi, Romania",
+      "phone": "+40 232 123 456",
+      "email": "info@rockniasi.ro"
+    }
+  },
+  "footer": {
+    "description": "Rock'n'Iasi - The ultimate rock festival experience in Eastern Europe.",
+    "quickLinks": "Quick Links",
+    "socialMedia": "Follow Us",
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Get the latest news and updates about Rock'n'Iasi Festival",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "rights": "© 2025 Rock'n'Iasi Festival. All rights reserved."
+  }
+} 

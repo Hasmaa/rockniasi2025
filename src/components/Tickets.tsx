@@ -1,50 +1,53 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Check, Star } from 'lucide-react'
 
 const Tickets = () => {
+  const { t } = useTranslation()
+  
   const ticketTiers = [
     {
-      name: "Day Pass",
+      name: t('tickets.types.dayPass.name'),
       price: "€89",
       originalPrice: "€120",
-      description: "Single day access to all stages",
+      description: t('tickets.types.dayPass.description'),
       features: [
-        "Access to all 3 stages",
-        "Food & drink vendors",
+        t('tickets.features.access'),
+        t('tickets.features.food'),
         "General admission",
-        "Festival merchandise discount"
+        t('tickets.features.merchandise')
       ],
       popular: false
     },
     {
-      name: "Weekend Pass",
+      name: t('tickets.types.weekendPass.name'),
       price: "€199",
       originalPrice: "€280",
-      description: "Full weekend access to all stages",
+      description: t('tickets.types.weekendPass.description'),
       features: [
         "3-day access to all stages",
         "Priority entry",
         "Exclusive food & drink areas",
-        "Festival merchandise discount",
+        t('tickets.features.merchandise'),
         "Access to VIP lounges",
-        "Meet & greet opportunities"
+        t('tickets.features.meetGreet')
       ],
       popular: true
     },
     {
-      name: "VIP Experience",
+      name: t('tickets.types.vipPass.name'),
       price: "€399",
       originalPrice: "€550",
-      description: "Ultimate festival experience",
+      description: t('tickets.types.vipPass.description'),
       features: [
         "3-day VIP access",
         "Exclusive VIP area",
         "Complimentary food & drinks",
         "Premium viewing areas",
-        "Artist meet & greets",
-        "Exclusive merchandise",
+        t('tickets.features.meetGreet'),
+        t('tickets.features.merchandise'),
         "Dedicated VIP entrance",
-        "Backstage tour"
+        t('tickets.features.backstage')
       ],
       popular: false
     }
@@ -61,11 +64,10 @@ const Tickets = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="tickets-title">
-            Get Your Tickets
+            {t('tickets.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="tickets-description">
-            Choose the perfect ticket for your Rock'n'Iasi experience. 
-            Early bird prices available until March 31st, 2025.
+            {t('tickets.subtitle')}
           </p>
         </motion.div>
 
@@ -107,7 +109,7 @@ const Tickets = () => {
                 </div>
                 
                 <div className="text-green-400 text-sm font-bold mb-6">
-                  Save {tier.originalPrice.replace('€', '') - tier.price.replace('€', '')}€
+                  Save {parseInt(tier.originalPrice.replace('€', '')) - parseInt(tier.price.replace('€', ''))}€
                 </div>
               </div>
 
@@ -128,7 +130,7 @@ const Tickets = () => {
                 }`}
                 data-testid={`ticket-${index}-buy-btn`}
               >
-                Buy Now
+                {t('tickets.buyNow')}
               </button>
             </motion.div>
           ))}

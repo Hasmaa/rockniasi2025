@@ -1,26 +1,29 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Music, Users, Star, Award } from 'lucide-react'
 
 const About = () => {
+  const { t } = useTranslation()
+  
   const features = [
     {
       icon: Music,
-      title: "50+ Artists",
+      title: t('about.stats.artists'),
       description: "World-class rock bands and solo artists from around the globe"
     },
     {
       icon: Users,
-      title: "50,000+ Attendees",
+      title: t('about.stats.capacity'),
       description: "Join thousands of rock enthusiasts for an unforgettable experience"
     },
     {
       icon: Star,
-      title: "3 Stages",
+      title: t('about.stats.stages'),
       description: "Multiple stages with different vibes and musical styles"
     },
     {
       icon: Award,
-      title: "Award Winning",
+      title: t('about.stats.years'),
       description: "Recognized as the best rock festival in Eastern Europe"
     }
   ]
@@ -36,11 +39,10 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="about-title">
-            About the Festival
+            {t('about.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="about-description">
-            Rock'n'Iasi is more than just a music festival - it's a celebration of rock culture, 
-            bringing together the best international and local rock artists for three unforgettable days.
+            {t('about.subtitle')}
           </p>
         </motion.div>
 
@@ -56,9 +58,7 @@ const About = () => {
               The Ultimate Rock Experience
             </h3>
             <p className="text-gray-300 mb-6">
-              Since its inception in 2010, Rock'n'Iasi has grown from a local gathering to one of 
-              Europe's most anticipated rock festivals. Our mission is to create an immersive 
-              experience where music, culture, and community come together.
+              {t('about.description')}
             </p>
             <p className="text-gray-300 mb-6">
               Set against the beautiful backdrop of Iasi, Romania's cultural capital, the festival 

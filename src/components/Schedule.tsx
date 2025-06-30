@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Clock, MapPin } from 'lucide-react'
 
 const Schedule = () => {
+  const { t } = useTranslation()
+  
   const schedule = [
     {
-      day: "Day 1 - July 15",
+      day: `${t('schedule.days.friday')} - July 15`,
       date: "Tuesday",
       events: [
         { time: "14:00", artist: "Opening Ceremony", stage: "Main Stage" },
@@ -15,7 +18,7 @@ const Schedule = () => {
       ]
     },
     {
-      day: "Day 2 - July 16",
+      day: `${t('schedule.days.saturday')} - July 16`,
       date: "Wednesday",
       events: [
         { time: "14:00", artist: "Morning Rock Session", stage: "Rock Stage" },
@@ -26,7 +29,7 @@ const Schedule = () => {
       ]
     },
     {
-      day: "Day 3 - July 17",
+      day: `${t('schedule.days.sunday')} - July 17`,
       date: "Thursday",
       events: [
         { time: "14:00", artist: "Final Day Kickoff", stage: "All Stages" },
@@ -49,11 +52,10 @@ const Schedule = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="schedule-title">
-            Festival Schedule
+            {t('schedule.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="schedule-description">
-            Plan your perfect festival experience with our detailed schedule. 
-            Three days of non-stop rock music across multiple stages.
+            {t('schedule.subtitle')}
           </p>
         </motion.div>
 

@@ -1,0 +1,127 @@
+{
+  "common": {
+    "buyTickets": "Cumpără Bilete",
+    "viewLineup": "Vezi Artiștii",
+    "learnMore": "Află Mai Mult",
+    "getDirections": "Obține Direcții",
+    "contact": "Contact",
+    "followUs": "Urmărește-ne"
+  },
+  "navigation": {
+    "home": "Acasă",
+    "about": "Despre",
+    "lineup": "Artiști",
+    "schedule": "Program",
+    "tickets": "Bilete",
+    "venue": "Locația",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "15-17 IULIE, 2025",
+    "title": "ROCK'N'",
+    "titleAccent": "IAȘI",
+    "subtitle": "Cel mai mare festival de rock din Europa de Est. Trei zile de energie rock pură, spectacole uimitoare și amintiri de neuitat.",
+    "date": "15-17 Iulie, 2025",
+    "location": "Iași, România"
+  },
+  "about": {
+    "title": "Despre Festival",
+    "subtitle": "Rock'n'Iași este mai mult decât un simplu festival de muzică",
+    "description": "De la începuturi, Rock'n'Iași a fost destinația principală pentru pasionații de muzică rock din Europa de Est. Festivalul nostru aduce împreună artiști legendari și talente emergente pe multiple scene, creând o experiență de neuitat pentru mii de fani rock.",
+    "stats": {
+      "years": "Ani de Activitate",
+      "artists": "Artiști Participanți",
+      "stages": "Scene Diferite",
+      "capacity": "Capacitate Festival"
+    }
+  },
+  "lineup": {
+    "title": "Lista Artiștilor",
+    "subtitle": "Întâlnește artiștii incredibili care vor urca pe scenă",
+    "headliners": "Artiști Principali",
+    "supporting": "Acte de Susținere",
+    "local": "Talente Locale"
+  },
+  "schedule": {
+    "title": "Programul Festivalului",
+    "subtitle": "Trei zile de muzică rock non-stop",
+    "days": {
+      "friday": "Vineri",
+      "saturday": "Sâmbătă",
+      "sunday": "Duminică"
+    }
+  },
+  "tickets": {
+    "title": "Obține Biletele",
+    "subtitle": "Alege experiența ta de festival",
+    "types": {
+      "dayPass": {
+        "name": "Bilet de Zi",
+        "description": "Acces pentru o zi de festival"
+      },
+      "weekendPass": {
+        "name": "Bilet de Weekend",
+        "description": "Acces complet pentru toate cele trei zile"
+      },
+      "vipPass": {
+        "name": "Bilet VIP",
+        "description": "Experiență premium cu acces în culise"
+      }
+    },
+    "features": {
+      "access": "Acces Festival",
+      "parking": "Parcare Gratuită",
+      "food": "Mâncare și Băuturi",
+      "merchandise": "Merchandise Oficial",
+      "backstage": "Acces în Culise",
+      "meetGreet": "Întâlnire cu Artiștii"
+    },
+    "soldOut": "Epuizat",
+    "buyNow": "Cumpără Acum"
+  },
+  "venue": {
+    "title": "Locația Festivalului",
+    "subtitle": "Situat în inima Iașului",
+    "description": "Festivalul are loc în spectaculosul Parc Central Iași, oferind multiple scene, zone de mâncare, zone de camping și acces ușor în centrul orașului.",
+    "features": {
+      "stages": "Scene Multiple",
+      "camping": "Camping Disponibil",
+      "parking": "Parcare Gratuită",
+      "food": "Zone de Mâncare",
+      "transport": "Transport Public",
+      "accessibility": "Locație Accesibilă"
+    }
+  },
+  "contact": {
+    "title": "Ia Legătura",
+    "subtitle": "Ai întrebări? Suntem aici să te ajutăm!",
+    "form": {
+      "name": "Nume",
+      "email": "Email",
+      "subject": "Subiect",
+      "message": "Mesaj",
+      "send": "Trimite Mesaj",
+      "namePlaceholder": "Numele tău complet",
+      "emailPlaceholder": "email.tau@exemplu.com",
+      "subjectPlaceholder": "Despre ce este vorba?",
+      "messagePlaceholder": "Spune-ne mai mult..."
+    },
+    "info": {
+      "address": "Strada Festivalului 123, Iași, România",
+      "phone": "+40 232 123 456",
+      "email": "info@rockniasi.ro"
+    }
+  },
+  "footer": {
+    "description": "Rock'n'Iași - Experiența ultimă de festival rock în Europa de Est.",
+    "quickLinks": "Link-uri Rapide",
+    "socialMedia": "Urmărește-ne",
+    "newsletter": {
+      "title": "Rămâi la Curent",
+      "description": "Primește cele mai recente știri și actualizări despre Rock'n'Iași Festival",
+      "placeholder": "Introdu email-ul tău",
+      "subscribe": "Abonează-te"
+    },
+    "rights": "© 2025 Rock'n'Iași Festival. Toate drepturile rezervate."
+  }
+} 

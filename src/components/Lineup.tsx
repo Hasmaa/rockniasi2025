@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Instagram, Twitter, Globe } from 'lucide-react'
 
 const Lineup = () => {
+  const { t } = useTranslation()
+  
   const artists = [
     {
       name: "Metallica",
@@ -58,11 +61,10 @@ const Lineup = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="lineup-title">
-            Festival Lineup
+            {t('lineup.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="lineup-description">
-            Experience the best rock artists from around the world. From legendary bands to rising stars, 
-            our lineup promises three days of unforgettable performances.
+            {t('lineup.subtitle')}
           </p>
         </motion.div>
 

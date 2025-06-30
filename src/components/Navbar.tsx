@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Menu, X } from 'lucide-react'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const Navbar = () => {
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -22,13 +25,13 @@ const Navbar = () => {
   }
 
   const navItems = [
-    { name: 'Home', id: 'hero' },
-    { name: 'About', id: 'about' },
-    { name: 'Lineup', id: 'lineup' },
-    { name: 'Schedule', id: 'schedule' },
-    { name: 'Tickets', id: 'tickets' },
-    { name: 'Venue', id: 'venue' },
-    { name: 'Contact', id: 'contact' }
+    { name: t('navigation.home'), id: 'hero' },
+    { name: t('navigation.about'), id: 'about' },
+    { name: t('navigation.lineup'), id: 'lineup' },
+    { name: t('navigation.schedule'), id: 'schedule' },
+    { name: t('navigation.tickets'), id: 'tickets' },
+    { name: t('navigation.venue'), id: 'venue' },
+    { name: t('navigation.contact'), id: 'contact' }
   ]
 
   return (
@@ -53,7 +56,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -64,16 +67,20 @@ const Navbar = () => {
                 {item.name}
               </button>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2"
-            data-testid="mobile-menu-button"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center space-x-3">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white p-2"
+              data-testid="mobile-menu-button"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

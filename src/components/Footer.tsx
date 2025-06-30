@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Heart, ArrowUp } from 'lucide-react'
 
 const Footer = () => {
+  const { t } = useTranslation()
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -24,8 +27,7 @@ const Footer = () => {
               <span className="text-xl font-display text-white">Rock'n'Iasi</span>
             </div>
             <p className="text-gray-400 mb-4">
-              The biggest rock festival in Eastern Europe, bringing together the best 
-              international and local rock artists for three unforgettable days.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a 
@@ -78,31 +80,31 @@ const Footer = () => {
             viewport={{ once: true }}
             data-testid="footer-links"
           >
-            <h4 className="text-lg font-bold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-bold text-white mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#about" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
-                  About Festival
+                  {t('navigation.about')}
                 </a>
               </li>
               <li>
                 <a href="#lineup" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
-                  Lineup
+                  {t('navigation.lineup')}
                 </a>
               </li>
               <li>
                 <a href="#schedule" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
-                  Schedule
+                  {t('navigation.schedule')}
                 </a>
               </li>
               <li>
                 <a href="#tickets" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
-                  Tickets
+                  {t('navigation.tickets')}
                 </a>
               </li>
               <li>
                 <a href="#venue" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
-                  Venue
+                  {t('navigation.venue')}
                 </a>
               </li>
             </ul>
@@ -118,10 +120,10 @@ const Footer = () => {
             <h4 className="text-lg font-bold text-white mb-4">Festival Info</h4>
             <ul className="space-y-2">
               <li className="text-gray-400">
-                <span className="font-semibold text-white">Date:</span> July 15-17, 2025
+                <span className="font-semibold text-white">Date:</span> {t('hero.date')}
               </li>
               <li className="text-gray-400">
-                <span className="font-semibold text-white">Location:</span> Iasi, Romania
+                <span className="font-semibold text-white">Location:</span> {t('hero.location')}
               </li>
               <li className="text-gray-400">
                 <span className="font-semibold text-white">Venue:</span> Iasi Exhibition Center
@@ -142,16 +144,16 @@ const Footer = () => {
             viewport={{ once: true }}
             data-testid="footer-contact"
           >
-            <h4 className="text-lg font-bold text-white mb-4">Contact</h4>
+            <h4 className="text-lg font-bold text-white mb-4">{t('navigation.contact')}</h4>
             <ul className="space-y-2">
               <li className="text-gray-400">
-                <span className="font-semibold text-white">Email:</span> info@rockniasi.com
+                <span className="font-semibold text-white">Email:</span> {t('contact.info.email')}
               </li>
               <li className="text-gray-400">
-                <span className="font-semibold text-white">Phone:</span> +40 232 123 456
+                <span className="font-semibold text-white">Phone:</span> {t('contact.info.phone')}
               </li>
               <li className="text-gray-400">
-                <span className="font-semibold text-white">Address:</span> Strada Palat, Nr. 1
+                <span className="font-semibold text-white">Address:</span> {t('contact.info.address')}
               </li>
               <li className="text-gray-400">
                 <span className="font-semibold text-white">Hours:</span> Mon-Fri 9:00-18:00
@@ -170,7 +172,7 @@ const Footer = () => {
         >
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
             <p>
-              © 2025 Rock'n'Iasi Festival. All rights reserved. Made with{' '}
+              {t('footer.rights')} Made with{' '}
               <Heart size={16} className="inline text-primary-400" /> in Iasi, Romania.
             </p>
           </div>

@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { MapPin, Car, Train, Bus, Wifi, Utensils, Heart } from 'lucide-react'
 
 const Venue = () => {
+  const { t } = useTranslation()
+  
   const facilities = [
     {
       icon: Wifi,
@@ -10,7 +13,7 @@ const Venue = () => {
     },
     {
       icon: Utensils,
-      title: "Food & Drinks",
+      title: t('venue.features.food'),
       description: "Multiple food vendors and bars"
     },
     {
@@ -20,7 +23,7 @@ const Venue = () => {
     },
     {
       icon: Car,
-      title: "Parking",
+      title: t('venue.features.parking'),
       description: "Secure parking for 10,000+ vehicles"
     }
   ]
@@ -29,7 +32,7 @@ const Venue = () => {
     {
       icon: Car,
       title: "By Car",
-      description: "Free parking available on site",
+      description: t('venue.features.parking'),
       details: "Follow signs to Rock'n'Iasi Festival parking"
     },
     {
@@ -41,7 +44,7 @@ const Venue = () => {
     {
       icon: Bus,
       title: "By Bus",
-      description: "Multiple bus routes to venue",
+      description: t('venue.features.transport'),
       details: "Lines 1, 3, 5, 8, 12, 15, 20, 25"
     }
   ]
@@ -57,11 +60,10 @@ const Venue = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display text-white mb-6" data-testid="venue-title">
-            Festival Venue
+            {t('venue.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="venue-description">
-            Experience Rock'n'Iasi at the beautiful Iasi Exhibition Center, 
-            a state-of-the-art venue with perfect acoustics and amazing atmosphere.
+            {t('venue.subtitle')}
           </p>
         </motion.div>
 
@@ -77,10 +79,7 @@ const Venue = () => {
               Iasi Exhibition Center
             </h3>
             <p className="text-gray-300 mb-6">
-              Located in the heart of Iasi, the Exhibition Center provides the perfect 
-              setting for our rock festival. With over 50,000 square meters of space, 
-              multiple stages, and excellent facilities, it's the ideal venue for an 
-              unforgettable music experience.
+              {t('venue.description')}
             </p>
             <p className="text-gray-300 mb-6">
               The venue features state-of-the-art sound systems, LED screens, 
@@ -99,7 +98,7 @@ const Venue = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <span className="text-primary-400 font-bold">Stages:</span>
-                <span className="text-gray-300">3 main stages + 2 smaller stages</span>
+                <span className="text-gray-300">{t('venue.features.stages')}</span>
               </div>
             </div>
           </motion.div>
@@ -121,7 +120,7 @@ const Venue = () => {
                   <h4 className="text-xl font-bold text-white mb-2">Iasi Exhibition Center</h4>
                   <p className="text-gray-400 mb-4">Strada Palat, Nr. 1</p>
                   <button className="btn-secondary text-sm">
-                    View on Map
+                    {t('common.getDirections')}
                   </button>
                 </div>
               </div>

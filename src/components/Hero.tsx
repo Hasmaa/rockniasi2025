@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Play, Calendar, MapPin } from 'lucide-react'
 
 const Hero = () => {
+  const { t } = useTranslation()
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -38,7 +41,7 @@ const Hero = () => {
             className="inline-block bg-primary-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6"
             data-testid="festival-badge"
           >
-            JULY 15-17, 2025
+            {t('hero.badge')}
           </motion.div>
 
           {/* Main title */}
@@ -49,7 +52,7 @@ const Hero = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-display text-white mb-6"
             data-testid="hero-title"
           >
-            ROCK'N'<span className="text-primary-400">IASI</span>
+            {t('hero.title')}<span className="text-primary-400">{t('hero.titleAccent')}</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -60,8 +63,7 @@ const Hero = () => {
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
             data-testid="hero-subtitle"
           >
-            The biggest rock festival in Eastern Europe. Three days of pure rock energy, 
-            amazing performances, and unforgettable memories.
+            {t('hero.subtitle')}
           </motion.p>
 
           {/* Event details */}
@@ -74,11 +76,11 @@ const Hero = () => {
           >
             <div className="flex items-center space-x-2 text-gray-300">
               <Calendar size={20} className="text-primary-400" />
-              <span>July 15-17, 2025</span>
+              <span>{t('hero.date')}</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-300">
               <MapPin size={20} className="text-primary-400" />
-              <span>Iasi, Romania</span>
+              <span>{t('hero.location')}</span>
             </div>
           </motion.div>
 
@@ -96,14 +98,14 @@ const Hero = () => {
               data-testid="buy-tickets-btn"
             >
               <Play size={20} className="group-hover:scale-110 transition-transform" />
-              <span>Buy Tickets</span>
+              <span>{t('common.buyTickets')}</span>
             </button>
             <button
               onClick={() => scrollToSection('lineup')}
               className="btn-secondary"
               data-testid="view-lineup-btn"
             >
-              View Lineup
+              {t('common.viewLineup')}
             </button>
           </motion.div>
 
