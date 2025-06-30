@@ -46,6 +46,7 @@ export default {
         }
       },
       fontFamily: {
+        'sans': ['Montserrat', 'system-ui', 'sans-serif'],
         'rock': ['Orbitron', 'monospace'],
         'display': ['Bebas Neue', 'cursive'],
       },
