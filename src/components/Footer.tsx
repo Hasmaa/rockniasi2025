@@ -10,7 +10,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-secondary-100 dark:bg-secondary-950 text-secondary-800 dark:text-white transition-colors duration-300" data-testid="footer">
+    <footer className="bg-secondary-200 dark:bg-secondary-900 text-secondary-800 dark:text-white transition-colors duration-300" data-testid="footer">
       <div className="container-custom py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <motion.div
