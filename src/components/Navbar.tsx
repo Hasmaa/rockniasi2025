@@ -40,7 +40,7 @@ const Navbar = () => {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-white/95 dark:bg-secondary-900/95 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
+          : 'bg-white/95 dark:bg-transparent backdrop-blur-md'
       }`}
       data-testid="navbar"
     >
