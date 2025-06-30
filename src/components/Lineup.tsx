@@ -10,42 +10,42 @@ const Lineup = () => {
       name: "Metallica",
       genre: "Heavy Metal",
       day: "Day 1 - Headliner",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=center&auto=format&q=80",
       social: { instagram: "metallica", twitter: "Metallica", website: "metallica.com" }
     },
     {
       name: "Foo Fighters",
       genre: "Alternative Rock",
       day: "Day 2 - Headliner",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center&auto=format&q=80",
       social: { instagram: "foofighters", twitter: "foofighters", website: "foofighters.com" }
     },
     {
       name: "Red Hot Chili Peppers",
       genre: "Funk Rock",
       day: "Day 3 - Headliner",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=400&fit=crop&crop=center&auto=format&q=80",
       social: { instagram: "chilipeppers", twitter: "ChiliPeppers", website: "redhotchilipeppers.com" }
     },
     {
       name: "Arctic Monkeys",
       genre: "Indie Rock",
       day: "Day 1",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?w=400&h=400&fit=crop&crop=center&auto=format&q=80",
       social: { instagram: "arcticmonkeys", twitter: "ArcticMonkeys", website: "arcticmonkeys.com" }
     },
     {
       name: "The Killers",
       genre: "Alternative Rock",
       day: "Day 2",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=center&auto=format&q=80&sat=-1",
       social: { instagram: "thekillers", twitter: "thekillers", website: "thekillersmusic.com" }
     },
     {
       name: "Queens of the Stone Age",
       genre: "Stoner Rock",
       day: "Day 3",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=400&h=400&fit=crop&crop=center&auto=format&q=80",
       social: { instagram: "queensofthestoneage", twitter: "qotsa", website: "qotsa.com" }
     }
   ]
@@ -84,16 +84,16 @@ const Lineup = () => {
               className="bg-white dark:bg-secondary-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 shadow-lg"
               data-testid={`artist-${index}`}
             >
-              <div className="relative h-64 bg-gradient-to-br from-primary-600 to-accent-600">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-white">🎸</span>
-                    </div>
-                    <h3 className="text-2xl font-display text-white mb-2">{artist.name}</h3>
-                    <p className="text-primary-300 font-medium">{artist.genre}</p>
-                  </div>
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={artist.image}
+                  alt={`${artist.name} - ${artist.genre}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-2xl font-display text-white mb-1">{artist.name}</h3>
+                  <p className="text-primary-300 font-medium">{artist.genre}</p>
                 </div>
                 <div className="absolute top-4 right-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-bold">
                   {artist.day}
