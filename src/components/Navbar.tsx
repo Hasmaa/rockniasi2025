@@ -68,8 +68,9 @@ const Navbar = () => {
                 {item.name}
               </button>
             ))}
-            <ThemeToggle />
             <LanguageSwitcher />
+            <ThemeToggle />
+
           </div>
 
           {/* Mobile menu button */}
