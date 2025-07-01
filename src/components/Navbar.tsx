@@ -115,8 +115,8 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-3">
-            <ThemeToggle />
             <LanguageSwitcher />
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-secondary-700 dark:text-white p-3 flex items-center justify-center min-w-[48px] min-h-[48px]"
