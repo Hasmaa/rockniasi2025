@@ -1,9 +1,22 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Play, Calendar, MapPin } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 const Hero = () => {
   const { t } = useTranslation()
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true)
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      // Hide indicator when user scrolls down more than 100px
+      setShowScrollIndicator(scrollY < 100)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -15,7 +28,7 @@ const Hero = () => {
   return (
     <section 
       id="hero" 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-end relative overflow-hidden"
       data-testid="hero-section"
     >
       {/* Background image */}
@@ -30,24 +43,18 @@ const Hero = () => {
       
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-accent-600/20"></div>
-      
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
-      </div>
 
-      <div className="container-custom text-center relative z-10">
+      <div className="container-custom text-left relative z-10 pr-8 md:pr-16">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           {/* Festival badge */}
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="inline-block bg-primary-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6"
             data-testid="festival-badge"
           >
@@ -56,9 +63,9 @@ const Hero = () => {
 
           {/* Main title */}
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
             className="text-5xl md:text-7xl lg:text-8xl font-display text-white mb-6"
             data-testid="hero-title"
           >
@@ -67,10 +74,10 @@ const Hero = () => {
 
           {/* Subtitle */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl ml-auto"
             data-testid="hero-subtitle"
           >
             {t('hero.subtitle')}
@@ -78,10 +85,10 @@ const Hero = () => {
 
           {/* Event details */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="flex flex-col sm:flex-row justify-end items-end sm:items-center gap-6 mb-12"
             data-testid="event-details"
           >
             <div className="flex items-center space-x-2 text-gray-200">
@@ -96,10 +103,10 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4 justify-end items-end sm:items-center"
             data-testid="hero-buttons"
           >
             <button
@@ -122,15 +129,15 @@ const Hero = () => {
           {/* Scroll indicator */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            animate={{ opacity: showScrollIndicator ? 1 : 0 }}
+            transition={{ delay: showScrollIndicator ? 1 : 0, duration: 0.5 }}
+            className="fixed bottom-24 right-11 z-40"
             data-testid="scroll-indicator"
           >
             <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
               <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 className="w-1 h-3 bg-white rounded-full mt-2"
               ></motion.div>
             </div>
