@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-secondary-200 dark:bg-secondary-900 text-secondary-800 dark:text-white transition-colors duration-300" data-testid="footer">
-      <div className="container-custom py-12">
+      <div className="container-custom section-padding">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

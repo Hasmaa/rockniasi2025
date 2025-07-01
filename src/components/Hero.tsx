@@ -44,7 +44,7 @@ const Hero = () => {
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 via-transparent to-accent-600/20"></div>
 
-      <div className="container-custom text-left relative z-10 pr-8 md:pr-16">
+      <div className="container-custom text-left relative z-10 px-4 sm:px-6 lg:px-8 pr-8 md:pr-20">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
