@@ -12,21 +12,21 @@ const Navbar = () => {
   // Animated Hamburger Component
   const AnimatedHamburger = ({ isOpen }: { isOpen: boolean }) => {
     return (
-      <div className="w-5 h-5 relative flex items-center justify-center">
+      <div className="w-6 h-6 relative flex items-center justify-center">
         {/* Top line */}
         <motion.div
-          className="absolute w-3 h-0.5 bg-secondary-700 dark:bg-white rounded-sm"
+          className="absolute w-4 h-0.5 bg-secondary-700 dark:bg-white rounded-sm"
           animate={
             isOpen
               ? { rotate: 45, y: 0 }
-              : { rotate: 0, y: -4 }
+              : { rotate: 0, y: -5 }
           }
           transition={{ duration: 0.3, ease: "easeInOut" }}
         />
         
         {/* Middle line */}
         <motion.div
-          className="absolute w-3 h-0.5 bg-secondary-700 dark:bg-white rounded-sm"
+          className="absolute w-4 h-0.5 bg-secondary-700 dark:bg-white rounded-sm"
           animate={
             isOpen
               ? { opacity: 0 }
@@ -37,11 +37,11 @@ const Navbar = () => {
         
         {/* Bottom line */}
         <motion.div
-          className="absolute w-3 h-0.5 bg-secondary-700 dark:bg-white rounded-sm"
+          className="absolute w-4 h-0.5 bg-secondary-700 dark:bg-white rounded-sm"
           animate={
             isOpen
               ? { rotate: -45, y: 0 }
-              : { rotate: 0, y: 4 }
+              : { rotate: 0, y: 5 }
           }
           transition={{ duration: 0.3, ease: "easeInOut" }}
         />
@@ -119,7 +119,7 @@ const Navbar = () => {
             <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-secondary-700 dark:text-white p-4 flex items-center justify-center"
+              className="text-secondary-700 dark:text-white p-3 flex items-center justify-center min-w-[48px] min-h-[48px]"
               data-testid="mobile-menu-button"
             >
               <AnimatedHamburger isOpen={isOpen} />
