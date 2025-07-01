@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion'
-import { useTranslation } from 'react-i18next'
 import { Calendar, MapPin, Users, Music, Award, Heart, Mail, User, Mic } from 'lucide-react'
 
 const RNI = () => {
-  const { t } = useTranslation()
 
   const stats = [
     { icon: Music, number: "12", label: "Trupe participante" },
