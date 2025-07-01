@@ -9,6 +9,7 @@ import Sponsors from './components/Sponsors'
 import Venue from './components/Venue'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import RNI from './components/RNI'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                 <Contact />
               </>
             } />
+            <Route path="/rni" element={<RNI />} />
           </Routes>
           <Footer />
         </div>
