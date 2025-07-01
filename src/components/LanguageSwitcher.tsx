@@ -28,7 +28,6 @@ const LanguageSwitcher = () => {
         whileTap={{ scale: 0.98 }}
         data-testid="language-button"
       >
-        <span className="text-lg">🏳️</span>
         <span className="text-sm">{currentLanguage.code.toUpperCase()}</span>
         <ChevronDown 
           size={16} 
@@ -61,7 +60,6 @@ const LanguageSwitcher = () => {
                 }`}
                 data-testid={`language-option-${language.code}`}
               >
-                <span className="text-lg">🏳️</span>
                 <span className="text-sm font-medium">{language.name}</span>
               </button>
             ))}
