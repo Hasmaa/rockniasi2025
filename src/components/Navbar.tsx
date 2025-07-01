@@ -74,7 +74,7 @@ const Navbar = () => {
 
     const observerOptions = {
       root: null,
-      rootMargin: '-100px 0px -70% 0px', // Account for navbar height (~80px) + extra margin
+      rootMargin: '-80px 0px -70% 0px', // Account for navbar height (~80px)
       threshold: 0
     }
 
@@ -103,7 +103,7 @@ const Navbar = () => {
     const scrollToElementWithOffset = (element: HTMLElement) => {
       const navbar = document.querySelector('nav[data-testid="navbar"]') as HTMLElement
       const navbarHeight = navbar ? navbar.offsetHeight : 80 // fallback to 80px
-      const elementPosition = element.offsetTop - navbarHeight - 20 // 20px extra padding
+      const elementPosition = element.offsetTop - navbarHeight // No extra padding
       
       window.scrollTo({
         top: elementPosition,
