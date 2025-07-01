@@ -154,8 +154,8 @@ const Navbar = () => {
       <div className="container-custom px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <button 
-            onClick={() => scrollToSection('hero')}
+          <Link 
+            to="/"
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
             <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
@@ -164,7 +164,7 @@ const Navbar = () => {
             <span className="text-xl font-display text-secondary-800 dark:text-white">
               Rock'n'Iasi
             </span>
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
