@@ -51,7 +51,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-secondary-600 dark:text-gray-300 mb-2">Last Name</label>
+                  <label htmlFor="lastName" className="block text-secondary-600 dark:text-gray-300 mb-2">{t('common.lastName')}</label>
                   <input
                     type="text"
                     id="lastName"
@@ -83,13 +83,13 @@ const Contact = () => {
                   data-testid="contact-subject"
                 >
                   <option value="">{t('contact.form.subjectPlaceholder')}</option>
-                  <option value="tickets">Ticket Information</option>
-                  <option value="lineup">Lineup Questions</option>
-                  <option value="venue">Venue & Directions</option>
-                  <option value="volunteer">Volunteer Opportunities</option>
-                  <option value="vendor">Vendor Information</option>
-                  <option value="press">Press & Media</option>
-                  <option value="other">Other</option>
+                  <option value="tickets">{t('contact.form.options.tickets')}</option>
+                  <option value="lineup">{t('contact.form.options.lineup')}</option>
+                  <option value="venue">{t('contact.form.options.venue')}</option>
+                  <option value="volunteer">{t('contact.form.options.volunteer')}</option>
+                  <option value="vendor">{t('contact.form.options.vendor')}</option>
+                  <option value="press">{t('contact.form.options.press')}</option>
+                  <option value="other">{t('contact.form.options.other')}</option>
                 </select>
               </div>
               

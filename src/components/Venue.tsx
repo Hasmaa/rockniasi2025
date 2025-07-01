@@ -8,8 +8,8 @@ const Venue = () => {
   const facilities = [
     {
       icon: Wifi,
-      title: "Free WiFi",
-      description: "High-speed internet throughout the venue"
+      title: t('venue.facilities.wifi.title'),
+      description: t('venue.facilities.wifi.description')
     },
     {
       icon: Utensils,
@@ -18,8 +18,8 @@ const Venue = () => {
     },
     {
       icon: Heart,
-      title: "Medical Services",
-      description: "24/7 medical assistance on site"
+      title: t('venue.facilities.medical.title'),
+      description: t('venue.facilities.medical.description')
     },
     {
       icon: Car,
@@ -31,21 +31,21 @@ const Venue = () => {
   const transportOptions = [
     {
       icon: Car,
-      title: "By Car",
-      description: t('venue.features.parking'),
-      details: "Follow signs to Rock'n'Iasi Festival parking"
+      title: t('venue.facilities.transport.car.title'),
+      description: t('venue.facilities.transport.car.description'),
+      details: t('venue.facilities.transport.car.details')
     },
     {
       icon: Train,
-      title: "By Train",
-      description: "Iasi Central Station - 15 min walk",
-      details: "Regular trains from Bucharest, Cluj, and Timisoara"
+      title: t('venue.facilities.transport.train.title'),
+      description: t('venue.facilities.transport.train.description'),
+      details: t('venue.facilities.transport.train.details')
     },
     {
       icon: Bus,
-      title: "By Bus",
-      description: t('venue.features.transport'),
-      details: "Lines 1, 3, 5, 8, 12, 15, 20, 25"
+      title: t('venue.facilities.transport.bus.title'),
+      description: t('venue.facilities.transport.bus.description'),
+      details: t('venue.facilities.transport.bus.details')
     }
   ]
 
@@ -76,15 +76,13 @@ const Venue = () => {
             data-testid="venue-info"
           >
             <h3 className="text-3xl font-display text-secondary-800 dark:text-white mb-6">
-              Iasi Exhibition Center
+              {t('common.iasiExhibitionCenter')}
             </h3>
             <p className="text-secondary-600 dark:text-gray-300 mb-6">
               {t('venue.description')}
             </p>
             <p className="text-secondary-600 dark:text-gray-300 mb-6">
-              The venue features state-of-the-art sound systems, LED screens, 
-              comfortable seating areas, and plenty of space for food vendors, 
-              merchandise stands, and interactive installations.
+              {t('common.venueDescription')}
             </p>
             
             <div className="space-y-4">
@@ -93,11 +91,11 @@ const Venue = () => {
                 <span className="text-secondary-600 dark:text-gray-300">Strada Palat, Nr. 1, Iasi, Romania</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-primary-500 dark:text-primary-400 font-bold">Capacity:</span>
-                <span className="text-secondary-600 dark:text-gray-300">50,000+ attendees</span>
+                <span className="text-primary-500 dark:text-primary-400 font-bold">{t('common.capacity')}</span>
+                <span className="text-secondary-600 dark:text-gray-300">{t('common.attendeesCount')}</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-primary-500 dark:text-primary-400 font-bold">Stages:</span>
+                <span className="text-primary-500 dark:text-primary-400 font-bold">{t('common.stages')}</span>
                 <span className="text-secondary-600 dark:text-gray-300">{t('venue.features.stages')}</span>
               </div>
             </div>
@@ -123,7 +121,7 @@ const Venue = () => {
                     <div className="w-16 h-16 bg-primary-600/80 rounded-full flex items-center justify-center mx-auto mb-4">
                       <MapPin size={32} className="text-white" />
                     </div>
-                    <h4 className="text-xl font-bold text-white mb-2">Iasi Exhibition Center</h4>
+                    <h4 className="text-xl font-bold text-white mb-2">{t('common.iasiExhibitionCenter')}</h4>
                     <p className="text-gray-200 mb-4">Strada Palat, Nr. 1</p>
                     <button className="btn-secondary text-sm">
                       {t('common.getDirections')}
@@ -144,7 +142,7 @@ const Venue = () => {
           data-testid="facilities-section"
         >
           <h3 className="text-3xl font-display text-secondary-800 dark:text-white text-center mb-12">
-            Venue Facilities
+            {t('common.venueFacilities')}
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {facilities.map((facility, index) => (
@@ -175,7 +173,7 @@ const Venue = () => {
           data-testid="transport-section"
         >
           <h3 className="text-3xl font-display text-secondary-800 dark:text-white text-center mb-12">
-            Getting There
+            {t('common.gettingThere')}
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {transportOptions.map((option, index) => (

@@ -5,7 +5,25 @@
     "learnMore": "Află Mai Mult",
     "getDirections": "Obține Direcții",
     "contact": "Contact",
-    "followUs": "Urmărește-ne"
+    "followUs": "Urmărește-ne",
+    "mostPopular": "Cel Mai Popular",
+    "lastName": "Nume de Familie",
+    "dontMiss": "Nu rata spectacolul incredibil al {artist} la Rock'n'Iași 2025!",
+    "moreArtists": "Mai mulți artiști vor fi anunțați! Rămâi la curent cu actualizările.",
+    "importantInfo": "Informații Importante",
+    "viewFullSchedule": "Vezi Programul Complet",
+    "venueFacilities": "Facilități Locație",
+    "gettingThere": "Cum Ajungi Acolo",
+    "experiencePowerOfRock": "Trăiește puterea rock-ului",
+    "iasiExhibitionCenter": "Centrul Expozițional Iași",
+    "attendeesCount": "50.000+ participanți",
+    "capacity": "Capacitate:",
+    "stages": "Scene:",
+    "venue": "Locația:",
+    "vipTickets2": "2 bilete VIP incluse",
+    "vipTickets5": "5 bilete VIP incluse",
+    "vipTickets10": "10 bilete VIP incluse",
+    "venueDescription": "Locația dispune de sisteme de sunet de ultimă generație, ecrane LED, zone de relaxare confortabile și mult spațiu pentru vânzători de mâncare, standuri cu produse și instalații interactive."
   },
   "navigation": {
     "home": "Acasă",
@@ -33,6 +51,29 @@
       "artists": "Artiști Participanți",
       "stages": "Scene Diferite",
       "capacity": "Capacitate Festival"
+    },
+    "features": {
+      "artists": {
+        "description": "Trupe rock de clasă mondială și artiști solo din întreaga lume"
+      },
+      "capacity": {
+        "description": "Alătură-te miilor de entuziaști rock pentru o experiență de neuitat"
+      },
+      "stages": {
+        "description": "Multiple scene cu atmosfere și stiluri muzicale diferite"
+      },
+      "years": {
+        "description": "Recunoscut ca cel mai bun festival rock din Europa de Est"
+      }
+    },
+    "experience": {
+      "title": "Experiența Rock Supremă",
+      "description1": "Pe fundalul frumos al Iașului, capitala culturală a României, festivalul oferă nu doar muzică incredibilă, ci și mâncare uimitoare, instalații de artă și experiențe interactive care fac fiecare moment memorabil.",
+      "genres": {
+        "rock": "Rock & Metal",
+        "alternative": "Alternative",
+        "indie": "Indie Rock"
+      }
     }
   },
   "lineup": {
@@ -49,6 +90,33 @@
       "friday": "Vineri",
       "saturday": "Sâmbătă",
       "sunday": "Duminică"
+    },
+    "events": {
+      "openingCeremony": "Ceremonia de Deschidere",
+      "localRockBand": "Trupă Rock Locală",
+      "alternativeRockAct": "Act Rock Alternativ",
+      "morningRockSession": "Sesiune Rock de Dimineață",
+      "indieRockBand": "Trupă Indie Rock",
+      "heavyMetalAct": "Act Heavy Metal",
+      "finalDayKickoff": "Deschiderea Zilei Finale",
+      "stonerRockBand": "Trupă Stoner Rock",
+      "funkRockAct": "Act Funk Rock"
+    },
+    "stages": {
+      "main": "Scena Principală",
+      "rock": "Scena Rock",
+      "alternative": "Scena Alternative",
+      "all": "Toate Scenele"
+    },
+    "info": {
+      "gatesOpen": "Deschiderea Porților",
+      "lastEntry": "Ultima Intrare",
+      "foodDrinks": "Mâncare și Băuturi",
+      "security": "Securitate",
+      "gatesOpenTime": "13:00 în fiecare zi",
+      "lastEntryTime": "21:00 în fiecare zi",
+      "foodAvailable": "Disponibile pe toată durata festivalului",
+      "securityInfo": "Securitate 24/7 la fața locului"
     }
   },
   "sponsors": {
@@ -76,10 +144,27 @@
       "vipTickets": "Bilete VIP incluse",
       "backstageAccess": "Acces în culise",
       "brandingRights": "Oportunități de co-branding",
-      "mediaKit": "Kit media digital"
+      "mediaKit": "Kit media digital",
+      "programBooklet": "Mențiune în broșura programului",
+      "newsletterMentions": "Mențiuni în newsletter",
+      "premiumLogo": "Plasare premium a logo-ului pe website",
+      "featuredCampaigns": "Campanii featured pe social media",
+      "premiumBooth": "Locație premium pentru stand",
+      "pressConference": "Participare la conferința de presă"
     },
     "contactUs": "Contactează-ne",
-    "becomePartner": "Devino Partener"
+    "becomePartner": "Devino Partener",
+    "whyPartner": "De Ce Să Fii Partenerul Nostru?",
+    "stats": {
+      "audienceReach": "Acoperire Audiență",
+      "digitalExposure": "Expunere Digitală",
+      "mediaCoverage": "Acoperire Media",
+      "brandAssociation": "Asociere Brand",
+      "attendees": "15.000+ participanți în 3 zile",
+      "socialFollowers": "50.000+ urmăritori pe social media",
+      "pressCoverage": "Acoperire presă locală și națională",
+      "brandAlign": "Aliniază-te cu cel mai mare eveniment rock din România"
+    }
   },
   "venue": {
     "title": "Locația Festivalului",
@@ -92,6 +177,33 @@
       "food": "Zone de Mâncare",
       "transport": "Transport Public",
       "accessibility": "Locație Accesibilă"
+    },
+    "facilities": {
+      "wifi": {
+        "title": "WiFi Gratuit",
+        "description": "Internet de mare viteză pe toată durata festivalului"
+      },
+      "medical": {
+        "title": "Servicii Medicale",
+        "description": "Asistență medicală 24/7 la fața locului"
+      },
+      "transport": {
+        "car": {
+          "title": "Cu Mașina",
+          "description": "Parcare securizată pentru 10.000+ vehicule",
+          "details": "Urmărește indicatoarele către parcarea Rock'n'Iași Festival"
+        },
+        "train": {
+          "title": "Cu Trenul",
+          "description": "Gara Centrală Iași - 15 min pe jos",
+          "details": "Trenuri regulate din București, Cluj și Timișoara"
+        },
+        "bus": {
+          "title": "Cu Autobuzul",
+          "description": "Transport public disponibil",
+          "details": "Liniile 1, 3, 5, 8, 12, 15, 20, 25"
+        }
+      }
     }
   },
   "contact": {
@@ -106,7 +218,16 @@
       "namePlaceholder": "Numele tău complet",
       "emailPlaceholder": "email.tau@exemplu.com",
       "subjectPlaceholder": "Despre ce este vorba?",
-      "messagePlaceholder": "Spune-ne mai mult..."
+      "messagePlaceholder": "Spune-ne mai mult...",
+      "options": {
+        "tickets": "Informații Bilete",
+        "lineup": "Întrebări despre Artiști",
+        "venue": "Locația și Direcții",
+        "volunteer": "Oportunități Voluntariat",
+        "vendor": "Informații Vânzători",
+        "press": "Presă și Media",
+        "other": "Altele"
+      }
     },
     "info": {
       "address": "Strada Festivalului 123, Iași, România",

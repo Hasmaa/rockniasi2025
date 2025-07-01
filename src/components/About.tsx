@@ -9,22 +9,22 @@ const About = () => {
     {
       icon: Music,
       title: t('about.stats.artists'),
-      description: "World-class rock bands and solo artists from around the globe"
+      description: t('about.features.artists.description')
     },
     {
       icon: Users,
       title: t('about.stats.capacity'),
-      description: "Join thousands of rock enthusiasts for an unforgettable experience"
+      description: t('about.features.capacity.description')
     },
     {
       icon: Star,
       title: t('about.stats.stages'),
-      description: "Multiple stages with different vibes and musical styles"
+      description: t('about.features.stages.description')
     },
     {
       icon: Award,
       title: t('about.stats.years'),
-      description: "Recognized as the best rock festival in Eastern Europe"
+      description: t('about.features.years.description')
     }
   ]
 
@@ -55,25 +55,23 @@ const About = () => {
             data-testid="about-content"
           >
             <h3 className="text-3xl font-display text-secondary-800 dark:text-white mb-6">
-              The Ultimate Rock Experience
+              {t('about.experience.title')}
             </h3>
             <p className="text-secondary-600 dark:text-gray-300 mb-6">
               {t('about.description')}
             </p>
             <p className="text-secondary-600 dark:text-gray-300 mb-6">
-              Set against the beautiful backdrop of Iasi, Romania's cultural capital, the festival 
-              offers not just incredible music, but also amazing food, art installations, and 
-              interactive experiences that make every moment memorable.
+              {t('about.experience.description1')}
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-bold">
-                Rock & Metal
+                {t('about.experience.genres.rock')}
               </div>
               <div className="bg-accent-600 text-white px-4 py-2 rounded-full text-sm font-bold">
-                Alternative
+                {t('about.experience.genres.alternative')}
               </div>
               <div className="bg-secondary-600 text-white px-4 py-2 rounded-full text-sm font-bold">
-                Indie Rock
+                {t('about.experience.genres.indie')}
               </div>
             </div>
           </motion.div>
@@ -96,7 +94,7 @@ const About = () => {
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <div className="text-center">
                     <h4 className="text-2xl font-bold text-white mb-2">Rock'n'Iasi 2025</h4>
-                    <p className="text-gray-200">Experience the power of rock</p>
+                    <p className="text-gray-200">{t('common.experiencePowerOfRock')}</p>
                   </div>
                 </div>
               </div>

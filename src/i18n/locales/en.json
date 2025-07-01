@@ -5,7 +5,25 @@
     "learnMore": "Learn More",
     "getDirections": "Get Directions",
     "contact": "Contact",
-    "followUs": "Follow Us"
+    "followUs": "Follow Us",
+    "mostPopular": "Most Popular",
+    "lastName": "Last Name",
+    "dontMiss": "Don't miss the incredible performance by {artist} at Rock'n'Iasi 2025!",
+    "moreArtists": "More artists to be announced! Stay tuned for updates.",
+    "importantInfo": "Important Information",
+    "viewFullSchedule": "View Full Schedule",
+    "venueFacilities": "Venue Facilities",
+    "gettingThere": "Getting There",
+    "experiencePowerOfRock": "Experience the power of rock",
+    "iasiExhibitionCenter": "Iasi Exhibition Center",
+    "attendeesCount": "50,000+ attendees",
+    "capacity": "Capacity:",
+    "stages": "Stages:",
+    "venue": "Venue:",
+    "vipTickets2": "2 VIP tickets included",
+    "vipTickets5": "5 VIP tickets included", 
+    "vipTickets10": "10 VIP tickets included",
+    "venueDescription": "The venue features state-of-the-art sound systems, LED screens, comfortable seating areas, and plenty of space for food vendors, merchandise stands, and interactive installations."
   },
   "navigation": {
     "home": "Home",
@@ -33,6 +51,29 @@
       "artists": "Artists Performing",
       "stages": "Different Stages",
       "capacity": "Festival Capacity"
+    },
+    "features": {
+      "artists": {
+        "description": "World-class rock bands and solo artists from around the globe"
+      },
+      "capacity": {
+        "description": "Join thousands of rock enthusiasts for an unforgettable experience"
+      },
+      "stages": {
+        "description": "Multiple stages with different vibes and musical styles"
+      },
+      "years": {
+        "description": "Recognized as the best rock festival in Eastern Europe"
+      }
+    },
+    "experience": {
+      "title": "The Ultimate Rock Experience",
+      "description1": "Set against the beautiful backdrop of Iasi, Romania's cultural capital, the festival offers not just incredible music, but also amazing food, art installations, and interactive experiences that make every moment memorable.",
+      "genres": {
+        "rock": "Rock & Metal",
+        "alternative": "Alternative",
+        "indie": "Indie Rock"
+      }
     }
   },
   "lineup": {
@@ -49,6 +90,33 @@
       "friday": "Friday",
       "saturday": "Saturday", 
       "sunday": "Sunday"
+    },
+    "events": {
+      "openingCeremony": "Opening Ceremony",
+      "localRockBand": "Local Rock Band",
+      "alternativeRockAct": "Alternative Rock Act",
+      "morningRockSession": "Morning Rock Session",
+      "indieRockBand": "Indie Rock Band",
+      "heavyMetalAct": "Heavy Metal Act",
+      "finalDayKickoff": "Final Day Kickoff",
+      "stonerRockBand": "Stoner Rock Band",
+      "funkRockAct": "Funk Rock Act"
+    },
+    "stages": {
+      "main": "Main Stage",
+      "rock": "Rock Stage",
+      "alternative": "Alternative Stage",
+      "all": "All Stages"
+    },
+    "info": {
+      "gatesOpen": "Gates Open",
+      "lastEntry": "Last Entry",
+      "foodDrinks": "Food & Drinks",
+      "security": "Security",
+      "gatesOpenTime": "13:00 each day",
+      "lastEntryTime": "21:00 each day",
+      "foodAvailable": "Available throughout the festival",
+      "securityInfo": "24/7 security on site"
     }
   },
   "sponsors": {
@@ -76,10 +144,27 @@
       "vipTickets": "VIP tickets included",
       "backstageAccess": "Backstage access",
       "brandingRights": "Co-branding opportunities",
-      "mediaKit": "Digital media kit"
+      "mediaKit": "Digital media kit",
+      "programBooklet": "Program booklet mention",
+      "newsletterMentions": "Newsletter mentions",
+      "premiumLogo": "Premium logo placement on website",
+      "featuredCampaigns": "Featured social media campaigns",
+      "premiumBooth": "Premium booth location",
+      "pressConference": "Press conference participation"
     },
     "contactUs": "Contact Us",
-    "becomePartner": "Become a Partner"
+    "becomePartner": "Become a Partner",
+    "whyPartner": "Why Partner With Us?",
+    "stats": {
+      "audienceReach": "Audience Reach",
+      "digitalExposure": "Digital Exposure",
+      "mediaCoverage": "Media Coverage",
+      "brandAssociation": "Brand Association",
+      "attendees": "15,000+ attendees over 3 days",
+      "socialFollowers": "50,000+ social media followers",
+      "pressCoverage": "Local & national press coverage",
+      "brandAlign": "Align with Romania's top rock event"
+    }
   },
   "venue": {
     "title": "Festival Venue",
@@ -92,6 +177,33 @@
       "food": "Food Courts",
       "transport": "Public Transport",
       "accessibility": "Accessible Venue"
+    },
+    "facilities": {
+      "wifi": {
+        "title": "Free WiFi",
+        "description": "High-speed internet throughout the venue"
+      },
+      "medical": {
+        "title": "Medical Services",
+        "description": "24/7 medical assistance on site"
+      },
+      "transport": {
+        "car": {
+          "title": "By Car",
+          "description": "Secure parking for 10,000+ vehicles",
+          "details": "Follow signs to Rock'n'Iasi Festival parking"
+        },
+        "train": {
+          "title": "By Train",
+          "description": "Iasi Central Station - 15 min walk",
+          "details": "Regular trains from Bucharest, Cluj, and Timisoara"
+        },
+        "bus": {
+          "title": "By Bus",
+          "description": "Public transport available",
+          "details": "Lines 1, 3, 5, 8, 12, 15, 20, 25"
+        }
+      }
     }
   },
   "contact": {
@@ -106,7 +218,16 @@
       "namePlaceholder": "Your full name",
       "emailPlaceholder": "your.email@example.com",
       "subjectPlaceholder": "What's this about?",
-      "messagePlaceholder": "Tell us more..."
+      "messagePlaceholder": "Tell us more...",
+      "options": {
+        "tickets": "Ticket Information",
+        "lineup": "Lineup Questions",
+        "venue": "Venue & Directions",
+        "volunteer": "Volunteer Opportunities",
+        "vendor": "Vendor Information",
+        "press": "Press & Media",
+        "other": "Other"
+      }
     },
     "info": {
       "address": "123 Festival Street, Iasi, Romania",

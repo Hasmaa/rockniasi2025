@@ -133,7 +133,7 @@ const Lineup = () => {
                 
                 <div className="text-center">
                   <p className="text-secondary-600 dark:text-gray-300 text-sm">
-                    Don't miss the incredible performance by {artist.name} at Rock'n'Iasi 2025!
+                    {t('common.dontMiss', { artist: artist.name })}
                   </p>
                 </div>
               </div>
@@ -149,12 +149,12 @@ const Lineup = () => {
           className="text-center mt-16"
           data-testid="lineup-cta"
         >
-          <p className="text-secondary-600 dark:text-gray-300 mb-6">
-            More artists to be announced! Stay tuned for updates.
-          </p>
-          <button className="btn-primary">
-            View Full Schedule
-          </button>
+                        <p className="text-secondary-600 dark:text-gray-300 mb-6">
+                {t('common.moreArtists')}
+              </p>
+                      <button className="btn-primary">
+              {t('common.viewFullSchedule')}
+            </button>
         </motion.div>
       </div>
     </section>

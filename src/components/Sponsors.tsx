@@ -14,8 +14,8 @@ const Sponsors = () => {
       benefits: [
         t('sponsors.benefits.logoWebsite'),
         t('sponsors.benefits.socialMedia'),
-        "Program booklet mention",
-        "2 VIP tickets included",
+        t('sponsors.benefits.programBooklet'),
+        t('common.vipTickets2'),
         t('sponsors.benefits.mediaKit')
       ],
       popular: false
@@ -30,9 +30,9 @@ const Sponsors = () => {
         t('sponsors.benefits.logoStage'),
         t('sponsors.benefits.socialMedia'),
         t('sponsors.benefits.boothSpace'),
-        "5 VIP tickets included",
+        t('common.vipTickets5'),
         t('sponsors.benefits.mediaKit'),
-        "Newsletter mentions"
+        t('sponsors.benefits.newsletterMentions')
       ],
       popular: true
     },
@@ -42,15 +42,15 @@ const Sponsors = () => {
       originalPrice: "€15,000",
       description: t('sponsors.packages.gold.description'),
       benefits: [
-        "Premium logo placement on website",
+        t('sponsors.benefits.premiumLogo'),
         t('sponsors.benefits.logoStage'),
-        "Featured social media campaigns",
-        "Premium booth location",
-        "10 VIP tickets included",
+        t('sponsors.benefits.featuredCampaigns'),
+        t('sponsors.benefits.premiumBooth'),
+        t('common.vipTickets10'),
         t('sponsors.benefits.backstageAccess'),
         t('sponsors.benefits.brandingRights'),
         t('sponsors.benefits.mediaKit'),
-        "Press conference participation"
+        t('sponsors.benefits.pressConference')
       ],
       popular: false
     }
@@ -106,7 +106,7 @@ const Sponsors = () => {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center space-x-1">
                     <Star size={16} />
-                    <span>Most Popular</span>
+                    <span>{t('common.mostPopular')}</span>
                   </div>
                 </div>
               )}
@@ -165,23 +165,23 @@ const Sponsors = () => {
           <div className="flex justify-center mb-4">
             <Heart size={48} className="text-primary-500 dark:text-primary-400" />
           </div>
-          <h4 className="text-2xl font-display text-secondary-800 dark:text-white mb-4">Why Partner With Us?</h4>
+          <h4 className="text-2xl font-display text-secondary-800 dark:text-white mb-4">{t('sponsors.whyPartner')}</h4>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
             <div>
-              <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">Audience Reach</h5>
-              <p className="text-secondary-600 dark:text-gray-300">15,000+ attendees over 3 days</p>
+              <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">{t('sponsors.stats.audienceReach')}</h5>
+              <p className="text-secondary-600 dark:text-gray-300">{t('sponsors.stats.attendees')}</p>
             </div>
             <div>
-              <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">Digital Exposure</h5>
-              <p className="text-secondary-600 dark:text-gray-300">50,000+ social media followers</p>
+              <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">{t('sponsors.stats.digitalExposure')}</h5>
+              <p className="text-secondary-600 dark:text-gray-300">{t('sponsors.stats.socialFollowers')}</p>
             </div>
             <div>
-              <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">Media Coverage</h5>
-              <p className="text-secondary-600 dark:text-gray-300">Local & national press coverage</p>
+              <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">{t('sponsors.stats.mediaCoverage')}</h5>
+              <p className="text-secondary-600 dark:text-gray-300">{t('sponsors.stats.pressCoverage')}</p>
             </div>
             <div>
-              <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">Brand Association</h5>
-              <p className="text-secondary-600 dark:text-gray-300">Align with Romania's top rock event</p>
+              <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">{t('sponsors.stats.brandAssociation')}</h5>
+              <p className="text-secondary-600 dark:text-gray-300">{t('sponsors.stats.brandAlign')}</p>
             </div>
           </div>
         </motion.div>

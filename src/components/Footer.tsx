@@ -126,13 +126,13 @@ const Footer = () => {
                 <span className="font-semibold text-secondary-800 dark:text-white">Location:</span> {t('hero.location')}
               </li>
               <li className="text-secondary-600 dark:text-gray-400">
-                <span className="font-semibold text-secondary-800 dark:text-white">Venue:</span> Iasi Exhibition Center
+                <span className="font-semibold text-secondary-800 dark:text-white">{t('common.venue')}</span> {t('common.iasiExhibitionCenter')}
               </li>
               <li className="text-secondary-600 dark:text-gray-400">
-                <span className="font-semibold text-secondary-800 dark:text-white">Capacity:</span> 50,000+
+                <span className="font-semibold text-secondary-800 dark:text-white">{t('common.capacity')}</span> 50,000+
               </li>
               <li className="text-secondary-600 dark:text-gray-400">
-                <span className="font-semibold text-secondary-800 dark:text-white">Stages:</span> 5 stages
+                <span className="font-semibold text-secondary-800 dark:text-white">{t('common.stages')}</span> 5 stages
               </li>
             </ul>
           </motion.div>

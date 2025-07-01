@@ -10,33 +10,33 @@ const Schedule = () => {
       day: `${t('schedule.days.friday')} - July 15`,
       date: "Tuesday",
       events: [
-        { time: "14:00", artist: "Opening Ceremony", stage: "Main Stage" },
-        { time: "15:30", artist: "Local Rock Band", stage: "Rock Stage" },
-        { time: "17:00", artist: "Arctic Monkeys", stage: "Main Stage" },
-        { time: "19:30", artist: "Alternative Rock Act", stage: "Alternative Stage" },
-        { time: "22:00", artist: "Metallica", stage: "Main Stage" }
+        { time: "14:00", artist: t('schedule.events.openingCeremony'), stage: t('schedule.stages.main') },
+        { time: "15:30", artist: t('schedule.events.localRockBand'), stage: t('schedule.stages.rock') },
+                  { time: "17:00", artist: "Arctic Monkeys", stage: t('schedule.stages.main') },
+          { time: "19:30", artist: t('schedule.events.alternativeRockAct'), stage: t('schedule.stages.alternative') },
+          { time: "22:00", artist: "Metallica", stage: t('schedule.stages.main') }
       ]
     },
     {
       day: `${t('schedule.days.saturday')} - July 16`,
       date: "Wednesday",
       events: [
-        { time: "14:00", artist: "Morning Rock Session", stage: "Rock Stage" },
-        { time: "15:30", artist: "Indie Rock Band", stage: "Alternative Stage" },
-        { time: "17:00", artist: "The Killers", stage: "Main Stage" },
-        { time: "19:30", artist: "Heavy Metal Act", stage: "Rock Stage" },
-        { time: "22:00", artist: "Foo Fighters", stage: "Main Stage" }
+        { time: "14:00", artist: t('schedule.events.morningRockSession'), stage: t('schedule.stages.rock') },
+        { time: "15:30", artist: t('schedule.events.indieRockBand'), stage: t('schedule.stages.alternative') },
+        { time: "17:00", artist: "The Killers", stage: t('schedule.stages.main') },
+        { time: "19:30", artist: t('schedule.events.heavyMetalAct'), stage: t('schedule.stages.rock') },
+        { time: "22:00", artist: "Foo Fighters", stage: t('schedule.stages.main') }
       ]
     },
     {
       day: `${t('schedule.days.sunday')} - July 17`,
       date: "Thursday",
       events: [
-        { time: "14:00", artist: "Final Day Kickoff", stage: "All Stages" },
-        { time: "15:30", artist: "Stoner Rock Band", stage: "Rock Stage" },
-        { time: "17:00", artist: "Queens of the Stone Age", stage: "Main Stage" },
-        { time: "19:30", artist: "Funk Rock Act", stage: "Alternative Stage" },
-        { time: "22:00", artist: "Red Hot Chili Peppers", stage: "Main Stage" }
+        { time: "14:00", artist: t('schedule.events.finalDayKickoff'), stage: t('schedule.stages.all') },
+        { time: "15:30", artist: t('schedule.events.stonerRockBand'), stage: t('schedule.stages.rock') },
+        { time: "17:00", artist: "Queens of the Stone Age", stage: t('schedule.stages.main') },
+        { time: "19:30", artist: t('schedule.events.funkRockAct'), stage: t('schedule.stages.alternative') },
+        { time: "22:00", artist: "Red Hot Chili Peppers", stage: t('schedule.stages.main') }
       ]
     }
   ]
@@ -130,23 +130,23 @@ const Schedule = () => {
           data-testid="schedule-info"
         >
           <div className="bg-white dark:bg-secondary-700 rounded-lg p-8 max-w-2xl mx-auto shadow-lg">
-            <h4 className="text-2xl font-display text-secondary-800 dark:text-white mb-4">Important Information</h4>
+            <h4 className="text-2xl font-display text-secondary-800 dark:text-white mb-4">{t('common.importantInfo')}</h4>
             <div className="grid md:grid-cols-2 gap-6 text-left">
               <div>
-                <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">Gates Open</h5>
-                <p className="text-secondary-600 dark:text-gray-300">13:00 each day</p>
+                <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">{t('schedule.info.gatesOpen')}</h5>
+                <p className="text-secondary-600 dark:text-gray-300">{t('schedule.info.gatesOpenTime')}</p>
               </div>
               <div>
-                <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">Last Entry</h5>
-                <p className="text-secondary-600 dark:text-gray-300">21:00 each day</p>
+                <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">{t('schedule.info.lastEntry')}</h5>
+                <p className="text-secondary-600 dark:text-gray-300">{t('schedule.info.lastEntryTime')}</p>
               </div>
               <div>
-                <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">Food & Drinks</h5>
-                <p className="text-secondary-600 dark:text-gray-300">Available throughout the festival</p>
+                <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">{t('schedule.info.foodDrinks')}</h5>
+                <p className="text-secondary-600 dark:text-gray-300">{t('schedule.info.foodAvailable')}</p>
               </div>
               <div>
-                <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">Security</h5>
-                <p className="text-secondary-600 dark:text-gray-300">24/7 security on site</p>
+                <h5 className="text-primary-500 dark:text-primary-400 font-bold mb-2">{t('schedule.info.security')}</h5>
+                <p className="text-secondary-600 dark:text-gray-300">{t('schedule.info.securityInfo')}</p>
               </div>
             </div>
           </div>
