@@ -15,7 +15,7 @@
     "venueFacilities": "Facilități Locație",
     "gettingThere": "Cum Ajungi Acolo",
     "experiencePowerOfRock": "Trăiește puterea rock-ului",
-    "iasiExhibitionCenter": "Centrul Expozițional Iași",
+    "iasiExhibitionCenter": "Parcarea Casei De Cultura a Studentilor",
     "attendeesCount": "50.000+ participanți",
     "capacity": "Capacitate:",
     "stages": "Scene:",
@@ -35,12 +35,12 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "15-17 IULIE, 2025",
+    "badge": "3-5 OCTOMBRIE, 2025",
     "title": "ROCK'N'",
     "titleAccent": "IAȘI",
     "subtitle": "Cel mai mare festival de rock din Europa de Est. Trei zile de energie rock pură, spectacole uimitoare și amintiri de neuitat.",
-    "date": "15-17 Iulie, 2025",
-    "location": "Iași, România"
+    "date": "3-5 Octombrie, 2025",
+    "location": "Parcarea Casei De Cultura a Studentilor, Iași"
   },
   "about": {
     "title": "Despre Festival",
@@ -169,7 +169,7 @@
   "venue": {
     "title": "Locația Festivalului",
     "subtitle": "Situat în inima Iașului",
-    "description": "Festivalul are loc în spectaculosul Parc Central Iași, oferind multiple scene, zone de mâncare, zone de camping și acces ușor în centrul orașului.",
+    "description": "Festivalul are loc la Parcarea Casei De Cultura a Studentilor, oferind multiple scene, zone de mâncare, zone de camping și acces ușor în centrul orașului.",
     "features": {
       "stages": "Scene Multiple",
       "camping": "Camping Disponibil",

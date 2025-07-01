@@ -15,7 +15,7 @@
     "venueFacilities": "Venue Facilities",
     "gettingThere": "Getting There",
     "experiencePowerOfRock": "Experience the power of rock",
-    "iasiExhibitionCenter": "Iasi Exhibition Center",
+    "iasiExhibitionCenter": "Parcarea Casei De Cultura a Studentilor",
     "attendeesCount": "50,000+ attendees",
     "capacity": "Capacity:",
     "stages": "Stages:",
@@ -35,12 +35,12 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "JULY 15-17, 2025",
+    "badge": "OCTOBER 3-5, 2025",
     "title": "ROCK'N'",
     "titleAccent": "IASI",
     "subtitle": "The biggest rock festival in Eastern Europe. Three days of pure rock energy, amazing performances, and unforgettable memories.",
-    "date": "July 15-17, 2025",
-    "location": "Iasi, Romania"
+    "date": "October 3-5, 2025",
+    "location": "Parcarea Casei De Cultura a Studentilor, Iasi"
   },
   "about": {
     "title": "About the Festival",
@@ -169,7 +169,7 @@
   "venue": {
     "title": "Festival Venue",
     "subtitle": "Located in the heart of Iasi",
-    "description": "The festival takes place at the spectacular Iasi Central Park, offering multiple stages, food courts, camping areas, and easy access to the city center.",
+    "description": "The festival takes place at Parcarea Casei De Cultura a Studentilor, offering multiple stages, food courts, camping areas, and easy access to the city center.",
     "features": {
       "stages": "Multiple Stages",
       "camping": "Camping Available", 
