@@ -1,9 +1,22 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Heart, ArrowUp } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 const Footer = () => {
   const { t } = useTranslation()
+  const [showScrollTop, setShowScrollTop] = useState(false)
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      // Show button when user scrolls down more than 300px
+      setShowScrollTop(scrollY > 300)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -194,11 +207,15 @@ const Footer = () => {
       {/* Scroll to top button */}
       <motion.button
         initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
+        animate={{ 
+          opacity: showScrollTop ? 1 : 0, 
+          scale: showScrollTop ? 1 : 0 
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         data-testid="scroll-to-top"
+        style={{ pointerEvents: showScrollTop ? 'auto' : 'none' }}
       >
         <ArrowUp size={24} />
       </motion.button>
