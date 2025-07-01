@@ -94,23 +94,18 @@ const Schedule = () => {
                     className="flex items-center justify-between p-4 bg-secondary-50 dark:bg-secondary-600 rounded-lg hover:bg-secondary-100 dark:hover:bg-secondary-500 transition-colors duration-300"
                     data-testid={`event-${dayIndex}-${eventIndex}`}
                   >
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center space-x-2 text-primary-500 dark:text-primary-400">
-                        <Clock size={20} />
-                        <span className="font-bold">{event.time}</span>
-                      </div>
-                      <div>
-                        <h4 className="text-secondary-800 dark:text-white font-bold text-lg">{event.artist}</h4>
-                        <div className="flex items-center space-x-2 text-secondary-600 dark:text-gray-300">
-                          <MapPin size={16} />
-                          <span>{event.stage}</span>
-                        </div>
+                    <div>
+                      <h4 className="text-secondary-800 dark:text-white font-bold text-lg">{event.artist}</h4>
+                      <div className="flex items-center space-x-2 text-secondary-600 dark:text-gray-300">
+                        <MapPin size={16} />
+                        <span>{event.stage}</span>
                       </div>
                     </div>
                     
                     <div className="text-right">
-                      <div className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        {event.time}
+                      <div className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center space-x-2">
+                        <Clock size={16} />
+                        <span>{event.time}</span>
                       </div>
                     </div>
                   </motion.div>
