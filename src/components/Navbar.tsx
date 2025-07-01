@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Menu, X } from 'lucide-react'
+import { motion } from 'framer-motion'
 import LanguageSwitcher from './LanguageSwitcher'
 import ThemeToggle from './ThemeToggle'
 
@@ -8,6 +8,46 @@ const Navbar = () => {
   const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  // Animated Hamburger Component
+  const AnimatedHamburger = ({ isOpen }: { isOpen: boolean }) => {
+    return (
+      <div className="w-5 h-5 relative flex items-center justify-center">
+        {/* Top line */}
+        <motion.div
+          className="absolute w-3 h-0.5 bg-secondary-700 dark:bg-white rounded-sm"
+          animate={
+            isOpen
+              ? { rotate: 45, y: 0 }
+              : { rotate: 0, y: -4 }
+          }
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        />
+        
+        {/* Middle line */}
+        <motion.div
+          className="absolute w-3 h-0.5 bg-secondary-700 dark:bg-white rounded-sm"
+          animate={
+            isOpen
+              ? { opacity: 0 }
+              : { opacity: 1 }
+          }
+          transition={{ duration: 0.2, ease: "easeInOut" }}
+        />
+        
+        {/* Bottom line */}
+        <motion.div
+          className="absolute w-3 h-0.5 bg-secondary-700 dark:bg-white rounded-sm"
+          animate={
+            isOpen
+              ? { rotate: -45, y: 0 }
+              : { rotate: 0, y: 4 }
+          }
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        />
+      </div>
+    )
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,10 +119,10 @@ const Navbar = () => {
             <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-secondary-700 dark:text-white p-2"
+              className="text-secondary-700 dark:text-white p-4 flex items-center justify-center"
               data-testid="mobile-menu-button"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              <AnimatedHamburger isOpen={isOpen} />
             </button>
           </div>
         </div>
