@@ -7,7 +7,7 @@ const Schedule = () => {
   
   const schedule = [
     {
-      day: `${t('schedule.days.friday')} - October 3`,
+      day: `${t('schedule.days.friday')} - ${t('common.october')} 3`,
       date: "Friday",
       events: [
         { time: "14:00", artist: t('schedule.events.openingCeremony'), stage: t('schedule.stages.main') },
@@ -18,7 +18,7 @@ const Schedule = () => {
       ]
     },
     {
-      day: `${t('schedule.days.saturday')} - October 4`,
+      day: `${t('schedule.days.saturday')} - ${t('common.october')} 4`,
       date: "Saturday",
       events: [
         { time: "14:00", artist: t('schedule.events.morningRockSession'), stage: t('schedule.stages.rock') },
@@ -29,7 +29,7 @@ const Schedule = () => {
       ]
     },
     {
-      day: `${t('schedule.days.sunday')} - October 5`,
+      day: `${t('schedule.days.sunday')} - ${t('common.october')} 5`,
       date: "Sunday",
       events: [
         { time: "14:00", artist: t('schedule.events.finalDayKickoff'), stage: t('schedule.stages.all') },
