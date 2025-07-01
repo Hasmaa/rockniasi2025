@@ -1,6 +1,6 @@
 {
   "common": {
-    "buyTickets": "Buy Tickets",
+    "becomePartner": "Become a Partner",
     "viewLineup": "View Lineup",
     "learnMore": "Learn More",
     "getDirections": "Get Directions",
@@ -12,7 +12,7 @@
     "about": "About",
     "lineup": "Lineup",
     "schedule": "Schedule",
-    "tickets": "Tickets",
+    "sponsors": "Sponsors",
     "venue": "Venue",
     "contact": "Contact"
   },
@@ -51,33 +51,35 @@
       "sunday": "Sunday"
     }
   },
-  "tickets": {
-    "title": "Get Your Tickets",
-    "subtitle": "Choose your festival experience",
-    "types": {
-      "dayPass": {
-        "name": "Day Pass",
-        "description": "Access to one day of the festival"
+  "sponsors": {
+    "title": "Become a Sponsor",
+    "subtitle": "Partner with us to make Rock'n'Iași unforgettable",
+    "packages": {
+      "bronze": {
+        "name": "Bronze Partner",
+        "description": "Perfect for local businesses looking to support the community"
       },
-      "weekendPass": {
-        "name": "Weekend Pass", 
-        "description": "Full festival access for all three days"
+      "silver": {
+        "name": "Silver Partner", 
+        "description": "Ideal for growing companies seeking regional exposure"
       },
-      "vipPass": {
-        "name": "VIP Pass",
-        "description": "Premium experience with backstage access"
+      "gold": {
+        "name": "Gold Partner",
+        "description": "Premium partnership with maximum brand visibility"
       }
     },
-    "features": {
-      "access": "Festival Access",
-      "parking": "Free Parking",
-      "food": "Food & Drinks",
-      "merchandise": "Official Merchandise",
-      "backstage": "Backstage Access",
-      "meetGreet": "Meet & Greet"
+    "benefits": {
+      "logoWebsite": "Logo on website",
+      "logoStage": "Logo on main stage",
+      "socialMedia": "Social media mentions",
+      "boothSpace": "Exhibition booth space",
+      "vipTickets": "VIP tickets included",
+      "backstageAccess": "Backstage access",
+      "brandingRights": "Co-branding opportunities",
+      "mediaKit": "Digital media kit"
     },
-    "soldOut": "Sold Out",
-    "buyNow": "Buy Now"
+    "contactUs": "Contact Us",
+    "becomePartner": "Become a Partner"
   },
   "venue": {
     "title": "Festival Venue",

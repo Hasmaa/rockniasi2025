@@ -1,6 +1,6 @@
 {
   "common": {
-    "buyTickets": "Cumpără Bilete",
+    "becomePartner": "Devino Partener",
     "viewLineup": "Vezi Artiștii",
     "learnMore": "Află Mai Mult",
     "getDirections": "Obține Direcții",
@@ -12,7 +12,7 @@
     "about": "Despre",
     "lineup": "Artiști",
     "schedule": "Program",
-    "tickets": "Bilete",
+    "sponsors": "Sponsori",
     "venue": "Locația",
     "contact": "Contact"
   },
@@ -51,33 +51,35 @@
       "sunday": "Duminică"
     }
   },
-  "tickets": {
-    "title": "Obține Biletele",
-    "subtitle": "Alege experiența ta de festival",
-    "types": {
-      "dayPass": {
-        "name": "Bilet de Zi",
-        "description": "Acces pentru o zi de festival"
+  "sponsors": {
+    "title": "Devino Sponsor",
+    "subtitle": "Alătură-te nouă pentru a face Rock'n'Iași de neuitat",
+    "packages": {
+      "bronze": {
+        "name": "Partener Bronze",
+        "description": "Perfect pentru afacerile locale care doresc să sprijine comunitatea"
       },
-      "weekendPass": {
-        "name": "Bilet de Weekend",
-        "description": "Acces complet pentru toate cele trei zile"
+      "silver": {
+        "name": "Partener Silver", 
+        "description": "Ideal pentru companiile în creștere care caută expunere regională"
       },
-      "vipPass": {
-        "name": "Bilet VIP",
-        "description": "Experiență premium cu acces în culise"
+      "gold": {
+        "name": "Partener Gold",
+        "description": "Parteneriat premium cu vizibilitate maximă a brandului"
       }
     },
-    "features": {
-      "access": "Acces Festival",
-      "parking": "Parcare Gratuită",
-      "food": "Mâncare și Băuturi",
-      "merchandise": "Merchandise Oficial",
-      "backstage": "Acces în Culise",
-      "meetGreet": "Întâlnire cu Artiștii"
+    "benefits": {
+      "logoWebsite": "Logo pe website",
+      "logoStage": "Logo pe scena principală",
+      "socialMedia": "Mențiuni pe social media",
+      "boothSpace": "Spațiu pentru standul de expoziție",
+      "vipTickets": "Bilete VIP incluse",
+      "backstageAccess": "Acces în culise",
+      "brandingRights": "Oportunități de co-branding",
+      "mediaKit": "Kit media digital"
     },
-    "soldOut": "Epuizat",
-    "buyNow": "Cumpără Acum"
+    "contactUs": "Contactează-ne",
+    "becomePartner": "Devino Partener"
   },
   "venue": {
     "title": "Locația Festivalului",

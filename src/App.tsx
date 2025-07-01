@@ -5,7 +5,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Lineup from './components/Lineup'
 import Schedule from './components/Schedule'
-import Tickets from './components/Tickets'
+import Sponsors from './components/Sponsors'
 import Venue from './components/Venue'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -23,7 +23,7 @@ function App() {
                 <About />
                 <Lineup />
                 <Schedule />
-                <Tickets />
+                <Sponsors />
                 <Venue />
                 <Contact />
               </>

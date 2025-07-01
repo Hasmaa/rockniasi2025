@@ -103,12 +103,12 @@ const Hero = () => {
             data-testid="hero-buttons"
           >
             <button
-              onClick={() => scrollToSection('tickets')}
+              onClick={() => scrollToSection('sponsors')}
               className="btn-primary flex items-center space-x-2 group"
-              data-testid="buy-tickets-btn"
+              data-testid="become-partner-btn"
             >
               <Play size={20} className="group-hover:scale-110 transition-transform" />
-              <span>{t('common.buyTickets')}</span>
+              <span>{t('common.becomePartner')}</span>
             </button>
             <button
               onClick={() => scrollToSection('lineup')}

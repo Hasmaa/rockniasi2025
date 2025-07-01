@@ -30,7 +30,7 @@ const Navbar = () => {
     { name: t('navigation.about'), id: 'about' },
     { name: t('navigation.lineup'), id: 'lineup' },
     { name: t('navigation.schedule'), id: 'schedule' },
-    { name: t('navigation.tickets'), id: 'tickets' },
+    { name: t('navigation.sponsors'), id: 'sponsors' },
     { name: t('navigation.venue'), id: 'venue' },
     { name: t('navigation.contact'), id: 'contact' }
   ]
