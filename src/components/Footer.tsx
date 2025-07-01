@@ -10,8 +10,8 @@ const Footer = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
-      // Show button when user scrolls down more than 300px
-      setShowScrollTop(scrollY > 300)
+      // Show button when user scrolls down more than 150px
+      setShowScrollTop(scrollY > 150)
     }
 
     window.addEventListener('scroll', handleScroll)

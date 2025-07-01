@@ -130,8 +130,8 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: showScrollIndicator ? 1 : 0 }}
-            transition={{ delay: showScrollIndicator ? 1 : 0, duration: 0.5 }}
-            className="fixed bottom-24 right-11 z-40 hidden md:block"
+            transition={{ delay: showScrollIndicator ? 0.3 : 0, duration: 0.5 }}
+            className="fixed bottom-8 right-11 z-40 hidden md:block"
             data-testid="scroll-indicator"
           >
             <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
