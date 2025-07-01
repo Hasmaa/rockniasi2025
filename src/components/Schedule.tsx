@@ -7,19 +7,19 @@ const Schedule = () => {
   
   const schedule = [
     {
-      day: `${t('schedule.days.friday')} - July 15`,
-      date: "Tuesday",
+      day: `${t('schedule.days.friday')} - October 3`,
+      date: "Friday",
       events: [
         { time: "14:00", artist: t('schedule.events.openingCeremony'), stage: t('schedule.stages.main') },
         { time: "15:30", artist: t('schedule.events.localRockBand'), stage: t('schedule.stages.rock') },
-                  { time: "17:00", artist: "Arctic Monkeys", stage: t('schedule.stages.main') },
-          { time: "19:30", artist: t('schedule.events.alternativeRockAct'), stage: t('schedule.stages.alternative') },
-          { time: "22:00", artist: "Metallica", stage: t('schedule.stages.main') }
+        { time: "17:00", artist: "Arctic Monkeys", stage: t('schedule.stages.main') },
+        { time: "19:30", artist: t('schedule.events.alternativeRockAct'), stage: t('schedule.stages.alternative') },
+        { time: "22:00", artist: "Metallica", stage: t('schedule.stages.main') }
       ]
     },
     {
-      day: `${t('schedule.days.saturday')} - July 16`,
-      date: "Wednesday",
+      day: `${t('schedule.days.saturday')} - October 4`,
+      date: "Saturday",
       events: [
         { time: "14:00", artist: t('schedule.events.morningRockSession'), stage: t('schedule.stages.rock') },
         { time: "15:30", artist: t('schedule.events.indieRockBand'), stage: t('schedule.stages.alternative') },
@@ -29,8 +29,8 @@ const Schedule = () => {
       ]
     },
     {
-      day: `${t('schedule.days.sunday')} - July 17`,
-      date: "Thursday",
+      day: `${t('schedule.days.sunday')} - October 5`,
+      date: "Sunday",
       events: [
         { time: "14:00", artist: t('schedule.events.finalDayKickoff'), stage: t('schedule.stages.all') },
         { time: "15:30", artist: t('schedule.events.stonerRockBand'), stage: t('schedule.stages.rock') },
