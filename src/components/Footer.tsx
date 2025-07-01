@@ -173,7 +173,7 @@ const Footer = () => {
           <div className="text-secondary-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
             <p>
               {t('footer.rights')} Made with{' '}
-              <Heart size={16} className="inline text-primary-500 dark:text-primary-400" /> in Iasi, Romania.
+              <Heart size={16} className="inline text-primary-500 dark:text-primary-400" /> by Hasma.
             </p>
           </div>
           
