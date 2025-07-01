@@ -69,7 +69,7 @@ const Hero = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-display text-white mb-6"
             data-testid="hero-title"
           >
-            {t('hero.title')}<span className="text-primary-400">{t('hero.titleAccent')}</span>
+            {t('hero.title')}<span className="text-primary-600">{t('hero.titleAccent')}</span>
           </motion.h1>
 
           {/* Subtitle */}
