@@ -8,6 +8,7 @@ const Navbar = () => {
   const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('hero')
 
   // Animated Hamburger Component
   const AnimatedHamburger = ({ isOpen }: { isOpen: boolean }) => {
@@ -57,6 +58,38 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Intersection Observer for active section detection
+  useEffect(() => {
+    const sections = ['hero', 'about', 'lineup', 'schedule', 'sponsors', 'venue', 'contact']
+    const observers: IntersectionObserver[] = []
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px', // Trigger when section is 20% from top
+      threshold: 0
+    }
+
+    sections.forEach((sectionId) => {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(sectionId)
+            }
+          })
+        }, observerOptions)
+        
+        observer.observe(element)
+        observers.push(observer)
+      }
+    })
+
+    return () => {
+      observers.forEach(observer => observer.disconnect())
+    }
+  }, [])
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -102,7 +135,11 @@ const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-secondary-700 dark:text-white hover:text-primary-400 transition-colors duration-300 font-medium"
+                className={`font-medium transition-colors duration-300 ${
+                  activeSection === item.id
+                    ? 'text-primary-500 dark:text-primary-400'
+                    : 'text-secondary-700 dark:text-white hover:text-primary-400'
+                }`}
                 data-testid={`nav-${item.id}`}
               >
                 {item.name}
@@ -135,7 +172,11 @@ const Navbar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-secondary-700 dark:text-white hover:text-primary-400 transition-colors duration-300 text-left"
+                  className={`transition-colors duration-300 text-left ${
+                    activeSection === item.id
+                      ? 'text-primary-500 dark:text-primary-400 font-semibold'
+                      : 'text-secondary-700 dark:text-white hover:text-primary-400'
+                  }`}
                   data-testid={`mobile-nav-${item.id}`}
                 >
                   {item.name}
