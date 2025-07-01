@@ -81,7 +81,6 @@ const Schedule = () => {
                 <h3 className="text-3xl font-display text-primary-500 dark:text-primary-400 mb-2" data-testid={`day-${dayIndex}-title`}>
                   {day.day}
                 </h3>
-                <p className="text-secondary-600 dark:text-gray-300 text-lg">{day.date}</p>
               </div>
 
               <div className="space-y-4" data-testid={`day-${dayIndex}-events`}>
